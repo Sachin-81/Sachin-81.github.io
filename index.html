@@ -105,7 +105,7 @@
       </div>
     </div>
     <div class="avatar-box" id="heroAvatar">
-      <video src="avatar-loop.mp4" poster="avatar.webp" autoplay muted loop playsinline aria-label="Animated avatar of Sachin presenting"></video>
+      <video id="heroVideo" src="avatar-loop.mp4" poster="avatar.webp" autoplay muted loop playsinline aria-label="Animated avatar of Sachin presenting"></video>
     </div>
   </div>
   <a class="scroll-cue" href="#about">Scroll<span class="chev" aria-hidden="true"></span></a>
@@ -239,33 +239,35 @@
     gsap.to('#heroAvatar video', { y: -8, duration: 2.4, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: 1.6 });
   })();
 
-  // Voice intro — browsers block autoplay-with-sound, so this runs only on tap.
+  // Talking intro — browsers block autoplay-with-sound, so the avatar's
+  // narrated intro video (avatar-intro.mp4, with voice) plays only on tap.
+  // When it ends or is stopped, the silent presenting loop resumes.
   (function () {
     var btn = document.getElementById('voiceBtn');
-    if (!btn) return;
-    var intro = "Hello, I'm Sachin. Data and Cloud Security Engineer at The Home Depot. I build AI agents that run cloud ops.";
-    if (!('speechSynthesis' in window)) {
-      btn.disabled = true;
-      btn.textContent = '🔇 Voice intro not supported here';
-      return;
-    }
-    var speaking = false;
-    function resetBtn() { speaking = false; btn.textContent = '🔊 Hear my intro'; }
-    btn.addEventListener('click', function () {
-      if (speaking) { window.speechSynthesis.cancel(); return; }
-      window.speechSynthesis.cancel();
-      var u = new SpeechSynthesisUtterance(intro);
-      u.lang = 'en-US';
-      u.rate = 1;
-      var voices = window.speechSynthesis.getVoices();
-      for (var i = 0; i < voices.length; i++) {
-        if (voices[i].lang && voices[i].lang.indexOf('en') === 0) { u.voice = voices[i]; break; }
+    var vid = document.getElementById('heroVideo');
+    if (!btn || !vid) return;
+    var playing = false;
+    function showLoop() {
+      playing = false;
+      vid.loop = true;
+      vid.muted = true;
+      if (vid.getAttribute('src') !== 'avatar-loop.mp4') {
+        vid.src = 'avatar-loop.mp4';
       }
-      u.onend = resetBtn;
-      u.onerror = resetBtn;
-      speaking = true;
+      vid.play().catch(function () {});
+      btn.textContent = '🔊 Hear my intro';
+    }
+    vid.addEventListener('ended', showLoop);
+    btn.addEventListener('click', function () {
+      if (playing) { showLoop(); return; }
+      playing = true;
+      vid.loop = false;
+      vid.muted = false;
+      vid.src = 'avatar-intro.mp4';
+      vid.currentTime = 0;
+      var p = vid.play();
+      if (p && p.catch) p.catch(function () { showLoop(); });
       btn.textContent = '⏸️ Tap to stop';
-      window.speechSynthesis.speak(u);
     });
   })();
 </script>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Goudiperu — Cloud Security Engineer | AI Agents & Cloud Ops</title>
+<meta name="description" content="Data and Cloud Security Engineer @ The Home Depot. I build AI agents that run cloud ops — MCP servers, Claude Code, Akamai, GCP (GKE), Kubernetes, Azure.">
+<meta property="og:title" content="Sachin Goudiperu — I Build AI Agents That Run Cloud Ops">
+<meta property="og:description" content="Data & Cloud Security Engineer @ The Home Depot. MCP servers, AI-driven infrastructure, Akamai WAF/CDN, GCP (GKE), Kubernetes.">
+<meta property="og:image" content="avatar.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B1220'/><text x='50' y='66' font-size='44' font-family='Arial' font-weight='bold' fill='%23FF9E4A' text-anchor='middle'>SG</text></svg>">
+<style>
+  :root{
+    --bg:#0B1220; --card:#111C30; --line:#1E2C47;
+    --text:#E9EEF6; --muted:#9AA7BD; --orange:#FF9E4A; --blue:#60A5FA;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;line-height:1.6}
+  a{color:var(--blue);text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;background:rgba(11,18,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+  nav .brand{font-weight:700;font-size:18px;color:var(--text);letter-spacing:.2px}
+  nav .brand span{color:var(--orange)}
+  nav .links a{color:var(--muted);margin-left:22px;font-size:15px}
+  nav .links a:hover{color:var(--text)}
+  .hero-stage{position:relative;min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:48px 0 88px;background:radial-gradient(700px 340px at 18% 28%,rgba(96,165,250,.10),transparent 60%),radial-gradient(560px 300px at 86% 18%,rgba(255,158,74,.09),transparent 60%)}
+  .hero-bg-name{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-weight:900;line-height:.94;letter-spacing:.01em;font-size:clamp(76px,15.5vw,224px);color:rgba(233,238,246,.05);-webkit-text-stroke:1px rgba(233,238,246,.06);pointer-events:none;user-select:none;z-index:0}
+  .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;width:100%}
+  .kline-1{font-size:clamp(17px,2.2vw,26px);font-weight:700;letter-spacing:.22em;color:var(--orange);margin-bottom:18px}
+  .kline-2{font-size:clamp(34px,4.8vw,60px);line-height:1.08;font-weight:800;letter-spacing:-.5px;color:var(--text)}
+  .kline-3{font-size:clamp(22px,3.1vw,38px);line-height:1.25;font-weight:700;color:var(--text);margin-top:18px}
+  .kline-3 span{color:var(--orange)}
+  .hero-sub{font-size:17px;color:var(--muted);margin-top:20px;max-width:54ch}
+  .hero-stage .cta{margin-top:30px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;margin:0 12px 10px 0;font-family:inherit;cursor:pointer;border:none}
+  .btn-primary{background:var(--orange);color:#131313}
+  .btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}
+  .btn[disabled]{opacity:.55;cursor:default}
+  .avatar-box{display:flex;justify-content:center;position:relative}
+  .avatar-box video{height:min(560px,68vh);max-width:100%;border-radius:18px;border:1px solid var(--line);background:#0E1730;object-fit:cover;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+  .scroll-cue{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);z-index:1;color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scroll-cue:hover{color:var(--text)}
+  .scroll-cue .chev{display:block;width:14px;height:14px;border-right:2px solid var(--orange);border-bottom:2px solid var(--orange);transform:rotate(45deg);animation:cueBounce 1.8s ease-in-out infinite}
+  @keyframes cueBounce{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(4px,4px)}}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:36px 0 4px}
+  .stat{background:linear-gradient(180deg,#13203A,#0F1930);border:1px solid var(--line);border-radius:14px;padding:20px 22px;text-align:center}
+  .stat .num{font-size:30px;font-weight:800;color:var(--orange)}
+  .stat .lbl{color:var(--muted);font-size:14px;margin-top:4px}
+  section{padding:44px 0}
+  h2{font-size:30px;font-weight:800;letter-spacing:-.3px;margin-bottom:6px}
+  h2 .bar{display:block;width:56px;height:4px;background:var(--orange);border-radius:2px;margin-bottom:14px}
+  .sub{color:var(--muted);margin-bottom:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+  .card h3{font-size:20px}
+  .card .meta{color:var(--orange);font-size:14px;font-weight:600;margin:2px 0 10px}
+  .card p,.card li{color:var(--muted);font-size:16px}
+  .card ul{margin-left:20px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card.accent{border-color:rgba(255,158,74,.45);background:linear-gradient(180deg,#152238,#111C30)}
+  .chip{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:8px 16px;margin:0 8px 10px 0;font-size:14px}
+  .chip.ai{border-color:rgba(255,158,74,.55);color:var(--orange);font-weight:600}
+  footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:820px){
+    .hero-stage{min-height:calc(100svh - 64px);padding:36px 0 84px}
+    .hero-inner{grid-template-columns:1fr;gap:26px;text-align:center}
+    .hero-sub{margin-left:auto;margin-right:auto}
+    .avatar-box video{height:400px}
+    .grid,.stats{grid-template-columns:1fr}
+    nav .links{display:none}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .scroll-cue .chev{animation:none}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <div class="brand">Sachin <span>Goudiperu</span></div>
+    <div class="links">
+      <a href="#about">About</a><a href="#ai">AI Work</a><a href="#work">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-stage">
+  <div class="hero-bg-name" aria-hidden="true"><span>SACHIN</span><span>GOUDIPERU</span></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="kline kline-1">HELLO, I'M SACHIN.</p>
+      <h1 class="kline kline-2">DATA &amp; CLOUD SECURITY ENGINEER</h1>
+      <p class="kline kline-3">I BUILD <span>AI AGENTS</span> THAT RUN CLOUD OPS.</p>
+      <p class="hero-sub">Data and Cloud Security Engineer @ The Home Depot — GCP (GKE) · Kubernetes · Akamai WAF/CDN · Azure · Terraform · MCP servers · Claude Code</p>
+      <div class="cta">
+        <button class="btn btn-primary" id="voiceBtn" type="button">🔊 Hear my intro</button>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/sachinvm1991" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Sachin-81" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="avatar-box" id="heroAvatar">
+      <video src="avatar-loop.mp4" poster="avatar.webp" autoplay muted loop playsinline aria-label="Animated avatar of Sachin presenting"></video>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about">Scroll<span class="chev" aria-hidden="true"></span></a>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="num">190+</div><div class="lbl">AI-callable tools across my Akamai MCP setup</div></div>
+    <div class="stat"><div class="num">1 sentence</div><div class="lbl">Replaces ~20 clicks across multiple systems</div></div>
+    <div class="stat"><div class="num">Daily</div><div class="lbl">Claude Code + MCP servers in my real workflow</div></div>
+  </div>
+
+  <section id="about">
+    <h2><span class="bar"></span>About</h2>
+    <div class="card reveal">
+      <p>I'm a Data &amp; Cloud Security Engineer at The Home Depot, with cloud experience across AWS, Azure and GCP. I'm AWS Certified (Solutions Architect – Associate), spent nearly two years working in Azure environments at Veracode and the Pennsylvania Turnpike Commission, and currently work in GCP day to day.</p>
+      <p style="margin-top:12px">At The Home Depot my work is GCP (GKE) clusters — tightening Kubernetes configs and fine-tuning Akamai WAF/CDN policies against the OWASP Top 10 so production traffic stays fast and secure, with Terraform for automation.</p>
+      <p style="margin-top:12px">Lately I'm deep into AI-driven ops. I build MCP servers that let AI assistants actually run infrastructure instead of just talking about it. I started from ALECS, a publicly available open-source Akamai MCP server, as a base — then remodeled it completely: changed the workflow end to end and shaped it for my workload instead of using it as it came. On top of that, I've created my own MCP servers built for the work I do. I'm also proficient in Claude Code, which I use daily along with these MCPs. What used to be 20 clicks in Control Center is now one sentence.</p>
+    </div>
+  </section>
+
+  <section id="ai">
+    <h2><span class="bar"></span>AI Agents &amp; Automation — What I Build</h2>
+    <p class="sub">This is where my work is heading: AI that doesn't just answer questions, it operates infrastructure.</p>
+    <div class="grid">
+      <div class="card accent reveal">
+        <h3>ALECS — Remodeled End to End</h3>
+        <div class="meta">Akamai MCP Server · 190+ tools</div>
+        <p>Started from the open-source ALECS server as a base and remodeled it completely — the workflow, the tooling, how it runs in my setup. CDN properties, DNS, SSL certs, WAF and security events, all callable by an AI assistant. Twenty Control Center clicks became one sentence.</p>
+      </div>
+      <div class="card accent reveal">
+        <h3>MCP Servers I Created</h3>
+        <div class="meta">Built for my workload</div>
+        <p>Servers I designed and built myself around the work I actually do — including mPulse MCP for real user monitoring data and a Bot Traffic Tester that shows how AI bots interact with our edge before they surprise us in production.</p>
+      </div>
+      <div class="card reveal">
+        <h3>One Sentence, Multiple Systems</h3>
+        <div class="meta">The daily workflow</div>
+        <p>Grafana, BigQuery, Playwright, Context7 and Atlassian MCPs plugged into one flow, driven by Claude Code every day. Spin up VMs, query the warehouse, chase a latency spike, open a ticket — all by asking.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Open Source</h3>
+        <div class="meta">github.com/Sachin-81</div>
+        <p>Some of my setups are shared as open source — public repos, zero secrets, runs on Mac and Windows. Clone, build, run. More on the way: ServiceNow, Terraform.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2><span class="bar"></span>Where I've Worked</h2>
+    <div class="card reveal">
+      <h3>Data and Cloud Security Engineer — The Home Depot</h3>
+      <div class="meta">Oct 2025 – Present · Atlanta, GA · Remote</div>
+      <ul>
+        <li>GCP (GKE) clusters — tightening Kubernetes configs for production workloads</li>
+        <li>Akamai WAF/CDN policy tuning, including OWASP Top 10 protections</li>
+        <li>Terraform automation for repeatable, safe infrastructure changes</li>
+        <li>AI-driven ops with MCP servers and Claude Code in the daily workflow</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <h3>Cloud Infrastructure Engineer — Veracode</h3>
+      <div class="meta">Apr 2025 – Oct 2025 · Remote</div>
+      <ul>
+        <li>Deployed Azure VMs and network resources via Terraform</li>
+        <li>Managed DNS/firewall rules and validated traffic flows after changes</li>
+        <li>Monitored AKS deployments and pod crashes with Azure Monitor and kubectl</li>
+        <li>Okta user provisioning and ServiceNow ticket queues for access issues</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <h3>Cloud Infrastructure Engineer / Analyst — Pennsylvania Turnpike Commission</h3>
+      <div class="meta">Aug 2024 – Apr 2025 · Remote</div>
+      <ul>
+        <li>Built Azure subnets and resource groups following naming standards</li>
+        <li>Deployed Windows/Linux VMs for SAP HANA testing</li>
+        <li>Checked Akamai WSA proxy logs for blocked URLs and policy issues</li>
+        <li>Runbook-driven fixes for VM and storage errors; Azure AD permissions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2><span class="bar"></span>Skills &amp; Certifications</h2>
+    <p class="sub">AI and automation first — that's the work I do every day:</p>
+    <div>
+      <span class="chip ai">AI Agents</span><span class="chip ai">MCP Servers</span><span class="chip ai">Claude Code</span><span class="chip ai">AI-Driven Cloud Ops</span><span class="chip ai">LLM Tooling</span><span class="chip ai">Prompt-Driven Automation</span>
+    </div>
+    <div style="margin-top:8px">
+      <span class="chip">GCP (GKE)</span><span class="chip">Kubernetes</span><span class="chip">Akamai WAF/CDN</span><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">Terraform</span><span class="chip">Docker</span><span class="chip">CI/CD</span><span class="chip">PowerShell</span><span class="chip">Okta</span><span class="chip">ServiceNow</span><span class="chip">Grafana</span><span class="chip">BigQuery</span>
+    </div>
+    <div class="card reveal" style="margin-top:18px">
+      <h3>AWS Certified Solutions Architect – Associate</h3>
+      <div class="meta">Amazon Web Services · Issued Jun 2024 · Expires Jun 2027</div>
+      <p>Also: two-time "Caught Orange Handed" recognition award winner at The Home Depot.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2><span class="bar"></span>Contact</h2>
+    <div class="card reveal">
+      <p>Always happy to talk cloud security, Kubernetes, Claude Code, or getting AI agents to do real work.</p>
+      <div class="cta" style="margin-top:16px">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/sachinvm1991" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Sachin-81" target="_blank" rel="noopener">See my GitHub</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>© 2026 Sachin Goudiperu · Atlanta, GA · Built with an AI that does the clicking</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), {threshold: .12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Hero entrance — avatar slides in, intro lines build one by one.
+  // Fallback: if GSAP fails to load, or the visitor prefers reduced motion,
+  // everything simply stays in its natural, fully visible state.
+  (function () {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || typeof gsap === 'undefined') return;
+    var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    tl.from('#heroAvatar', { x: 180, opacity: 0, duration: 1.15 })
+      .from('.kline-1', { y: 26, opacity: 0, duration: .55 }, '-=0.55')
+      .from('.kline-2', { y: 36, opacity: 0, duration: .65 }, '-=0.28')
+      .from('.kline-3', { y: 26, opacity: 0, duration: .55 }, '-=0.32')
+      .from('.hero-sub', { y: 16, opacity: 0, duration: .5 }, '-=0.25')
+      .from('.hero-stage .cta', { y: 14, opacity: 0, duration: .5 }, '-=0.3')
+      .from('.scroll-cue', { opacity: 0, duration: .6 }, '-=0.2');
+    gsap.to('#heroAvatar video', { y: -8, duration: 2.4, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: 1.6 });
+  })();
+
+  // Voice intro — browsers block autoplay-with-sound, so this runs only on tap.
+  (function () {
+    var btn = document.getElementById('voiceBtn');
+    if (!btn) return;
+    var intro = "Hello, I'm Sachin. Data and Cloud Security Engineer at The Home Depot. I build AI agents that run cloud ops.";
+    if (!('speechSynthesis' in window)) {
+      btn.disabled = true;
+      btn.textContent = '🔇 Voice intro not supported here';
+      return;
+    }
+    var speaking = false;
+    function resetBtn() { speaking = false; btn.textContent = '🔊 Hear my intro'; }
+    btn.addEventListener('click', function () {
+      if (speaking) { window.speechSynthesis.cancel(); return; }
+      window.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(intro);
+      u.lang = 'en-US';
+      u.rate = 1;
+      var voices = window.speechSynthesis.getVoices();
+      for (var i = 0; i < voices.length; i++) {
+        if (voices[i].lang && voices[i].lang.indexOf('en') === 0) { u.voice = voices[i]; break; }
+      }
+      u.onend = resetBtn;
+      u.onerror = resetBtn;
+      speaking = true;
+      btn.textContent = '⏸️ Tap to stop';
+      window.speechSynthesis.speak(u);
+    });
+  })();
+</script>
+</body>
+</html>

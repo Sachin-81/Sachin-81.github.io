@@ -99,7 +99,7 @@
       <p class="kline kline-3">I BUILD <span>AI AGENTS</span> THAT RUN CLOUD OPS.</p>
       <p class="hero-sub">Data and Cloud Security Engineer @ The Home Depot — GCP (GKE) · Kubernetes · Akamai WAF/CDN · Azure · Terraform · MCP servers · Claude Code</p>
       <div class="cta">
-        <button class="btn btn-primary" id="voiceBtn" type="button">🔊 Hear my intro</button>
+        <button class="btn btn-primary" id="voiceBtn" type="button">▶ Watch my intro</button>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/sachinvm1991" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/Sachin-81" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -240,7 +240,7 @@
   })();
 
   // Talking intro — browsers block autoplay-with-sound, so the avatar's
-  // narrated intro video (avatar-intro.mp4, with voice) plays only on tap.
+  // narrated intro video (avatar-talk.mp4, with voice) plays only on tap.
   // When it ends or is stopped, the silent presenting loop resumes.
   (function () {
     var btn = document.getElementById('voiceBtn');
@@ -255,7 +255,7 @@
         vid.src = 'avatar-loop.mp4';
       }
       vid.play().catch(function () {});
-      btn.textContent = '🔊 Hear my intro';
+      btn.textContent = '▶ Watch my intro';
     }
     vid.addEventListener('ended', showLoop);
     btn.addEventListener('click', function () {
@@ -263,7 +263,7 @@
       playing = true;
       vid.loop = false;
       vid.muted = false;
-      vid.src = 'avatar-intro.mp4';
+      vid.src = 'avatar-talk.mp4';
       vid.currentTime = 0;
       var p = vid.play();
       if (p && p.catch) p.catch(function () { showLoop(); });

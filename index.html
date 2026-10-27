@@ -26,7 +26,7 @@
   nav .brand span{color:var(--orange)}
   nav .links a{color:var(--muted);margin-left:22px;font-size:15px}
   nav .links a:hover{color:var(--text)}
-  .hero-stage{position:relative;min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:48px 0 88px;background:radial-gradient(700px 340px at 18% 28%,rgba(96,165,250,.10),transparent 60%),radial-gradient(560px 300px at 86% 18%,rgba(255,158,74,.09),transparent 60%)}
+  .hero-stage{position:relative;min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:48px 0 88px;background:radial-gradient(900px 760px at 82% 42%,rgba(38,64,110,.55),rgba(16,30,56,.25) 52%,transparent 78%),radial-gradient(700px 340px at 18% 28%,rgba(96,165,250,.10),transparent 60%),radial-gradient(560px 300px at 86% 18%,rgba(255,158,74,.09),transparent 60%)}
   .hero-bg-name{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-weight:900;line-height:.94;letter-spacing:.01em;font-size:clamp(76px,15.5vw,224px);color:rgba(233,238,246,.05);-webkit-text-stroke:1px rgba(233,238,246,.06);pointer-events:none;user-select:none;z-index:0}
   .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;width:100%}
   .kline-1{font-size:clamp(17px,2.2vw,26px);font-weight:700;letter-spacing:.22em;color:var(--orange);margin-bottom:18px}
@@ -39,9 +39,8 @@
   .btn-primary{background:var(--orange);color:#131313}
   .btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}
   .btn[disabled]{opacity:.55;cursor:default}
-  .avatar-box{display:flex;justify-content:center;position:relative}
-  .avatar-box::after{content:"";position:absolute;left:50%;bottom:2%;transform:translateX(-50%);width:62%;height:34px;background:radial-gradient(ellipse at center,rgba(0,0,0,.5),transparent 68%);filter:blur(6px);pointer-events:none}
-  .avatar-box video{height:min(620px,80vh);max-width:100%;border:none;border-radius:0;background:transparent;object-fit:cover;object-position:center bottom;box-shadow:none;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 13%,#000 87%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 9%,#000 97%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 13%,#000 87%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 9%,#000 97%,transparent 100%);mask-composite:intersect}
+  .avatar-box{position:absolute;top:0;right:0;bottom:0;width:min(470px,44%);z-index:0}
+  .avatar-box video{width:100%;height:100%;display:block;object-fit:cover;object-position:center 24%}
   .scroll-cue{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);z-index:1;color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
   .scroll-cue:hover{color:var(--text)}
   .scroll-cue .chev{display:block;width:14px;height:14px;border-right:2px solid var(--orange);border-bottom:2px solid var(--orange);transform:rotate(45deg);animation:cueBounce 1.8s ease-in-out infinite}
@@ -70,7 +69,8 @@
     .hero-stage{min-height:calc(100svh - 64px);padding:36px 0 84px}
     .hero-inner{grid-template-columns:1fr;gap:26px;text-align:center}
     .hero-sub{margin-left:auto;margin-right:auto}
-    .avatar-box video{height:460px}
+    .avatar-box{position:relative;width:100%;height:440px;flex:none;order:2}
+    .hero-inner{order:1}
     .grid,.stats{grid-template-columns:1fr}
     nav .links{display:none}
   }
@@ -93,6 +93,9 @@
 
 <header class="hero-stage">
   <div class="hero-bg-name" aria-hidden="true"><span>SACHIN</span><span>GOUDIPERU</span></div>
+  <div class="avatar-box" id="heroAvatar">
+    <video id="heroVideo" src="avatar-loop.mp4" poster="avatar.webp" autoplay muted loop playsinline aria-label="Animated avatar of Sachin presenting"></video>
+  </div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <p class="kline kline-1">HELLO, I'M SACHIN.</p>
@@ -100,13 +103,9 @@
       <p class="kline kline-3">I BUILD <span>AI AGENTS</span> THAT RUN CLOUD OPS.</p>
       <p class="hero-sub">Data and Cloud Security Engineer @ The Home Depot — GCP (GKE) · Kubernetes · Akamai WAF/CDN · Azure · Terraform · MCP servers · Claude Code</p>
       <div class="cta">
-        <button class="btn btn-primary" id="voiceBtn" type="button">▶ Watch my intro</button>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/sachinvm1991" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/Sachin-81" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </div>
-    <div class="avatar-box" id="heroAvatar">
-      <video id="heroVideo" src="avatar-loop.mp4" poster="avatar.webp" autoplay muted loop playsinline aria-label="Animated avatar of Sachin presenting"></video>
     </div>
   </div>
   <a class="scroll-cue" href="#about">Scroll<span class="chev" aria-hidden="true"></span></a>
@@ -237,39 +236,60 @@
       .from('.hero-sub', { y: 16, opacity: 0, duration: .5 }, '-=0.25')
       .from('.hero-stage .cta', { y: 14, opacity: 0, duration: .5 }, '-=0.3')
       .from('.scroll-cue', { opacity: 0, duration: .6 }, '-=0.2');
-    gsap.to('#heroAvatar video', { y: -8, duration: 2.4, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: 1.6 });
   })();
 
-  // Talking intro — browsers block autoplay-with-sound, so the avatar's
-  // narrated intro video (avatar-talk.mp4, with voice) plays only on tap.
-  // When it ends or is stopped, the silent presenting loop resumes.
+  // Talking avatar — no button: after the entrance, the avatar starts
+  // talking on his own (avatar-talk-full.mp4, lip-synced, with voice).
+  // Browsers may block autoplay-with-sound for first-time visitors; in
+  // that case the silent loop keeps playing and the talk starts on the
+  // visitor's first tap or click anywhere on the page. Clicking the
+  // avatar replays the talk. When the talk ends, the loop resumes.
   (function () {
-    var btn = document.getElementById('voiceBtn');
     var vid = document.getElementById('heroVideo');
-    if (!btn || !vid) return;
-    var playing = false;
+    if (!vid) return;
+    var LOOP = 'avatar-loop.mp4';
+    var TALK = 'avatar-talk-full.mp4';
+    var talking = false;
+    var armed = false;
     function showLoop() {
-      playing = false;
+      talking = false;
       vid.loop = true;
       vid.muted = true;
-      if (vid.getAttribute('src') !== 'avatar-loop.mp4') {
-        vid.src = 'avatar-loop.mp4';
-      }
+      vid.style.objectPosition = 'center 24%';
+      if (vid.getAttribute('src') !== LOOP) { vid.src = LOOP; }
       vid.play().catch(function () {});
-      btn.textContent = '▶ Watch my intro';
     }
-    vid.addEventListener('ended', showLoop);
-    btn.addEventListener('click', function () {
-      if (playing) { showLoop(); return; }
-      playing = true;
+    function armFirstInteraction() {
+      if (armed) return;
+      armed = true;
+      var go = function () {
+        document.removeEventListener('pointerdown', go);
+        document.removeEventListener('keydown', go);
+        talk();
+      };
+      document.addEventListener('pointerdown', go);
+      document.addEventListener('keydown', go);
+    }
+    function talk() {
+      if (talking) return;
+      talking = true;
       vid.loop = false;
       vid.muted = false;
-      vid.src = 'avatar-talk.mp4';
+      vid.style.objectPosition = 'center 18%';
+      vid.src = TALK;
       vid.currentTime = 0;
       var p = vid.play();
-      if (p && p.catch) p.catch(function () { showLoop(); });
-      btn.textContent = '⏸️ Tap to stop';
-    });
+      if (p && p.catch) {
+        p.catch(function () {
+          talking = false;
+          showLoop();
+          armFirstInteraction();
+        });
+      }
+    }
+    vid.addEventListener('ended', showLoop);
+    vid.addEventListener('click', function () { if (!talking) talk(); });
+    window.addEventListener('load', function () { setTimeout(talk, 1500); });
   })();
 </script>
 </body>

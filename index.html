@@ -345,7 +345,7 @@
       { k: ['project', 'portfolio', 'ai work', 'automation', 'agent'], a: "Sachin's AI work: (1) ALECS, remodeled end to end — 190+ Akamai tools an AI can call; (2) MCP servers he created himself, like the mPulse MCP and Bot Traffic Tester; (3) a daily workflow chaining Grafana, BigQuery, Playwright, Context7 and Atlassian MCPs through Claude Code — one sentence across multiple systems." },
       { k: ['award', 'recognition', 'caught orange'], a: "Sachin is a two-time winner of The Home Depot's 'Caught Orange Handed' recognition award." },
       { k: ['contact', 'reach', 'email', 'hire', 'hiring', 'linkedin', 'github', 'connect'], a: "Best way to reach Sachin is LinkedIn: linkedin.com/in/sachinvm1991 — his code and open-source setups are on GitHub: github.com/Sachin-81. He's always happy to talk cloud security, Kubernetes, Claude Code, or getting AI agents to do real work." },
-      { k: ['who', 'about', 'sachin', 'tell me'], a: "Sachin Goudiperu is a Data and Cloud Security Engineer at The Home Depot, based in Atlanta. He works across AWS, Azure and GCP (currently GCP day to day), and builds AI agents that run cloud ops — MCP servers he created, an Akamai MCP server he remodeled end to end from an open-source base, and Claude Code in his daily workflow." },
+      { k: ['who is', 'sachin'], a: "Sachin Goudiperu is a Data and Cloud Security Engineer at The Home Depot, based in Atlanta. He works across AWS, Azure and GCP (currently GCP day to day), and builds AI agents that run cloud ops — MCP servers he created, an Akamai MCP server he remodeled end to end from an open-source base, and Claude Code in his daily workflow." },
       { k: ['terraform'], a: "Terraform is Sachin's automation backbone — repeatable, safe infrastructure changes across GCP and Azure: VMs, networking, resource groups and cluster configuration." },
       { k: ['hi', 'hello', 'hey'], a: "Hi! I'm Sachin's AI assistant. Ask me about his skills, the MCP servers he built, the ALECS rebuild, his experience, or how to contact him." }
     ];
@@ -367,7 +367,7 @@
         item.k.forEach(function (kw) { if (s.indexOf(kw) !== -1) score += kw.length; });
         if (score > bestScore) { bestScore = score; best = item; }
       });
-      return bestScore >= 3 && best ? best.a : FALLBACK;
+      return bestScore >= 2 && best ? best.a : FALLBACK;
     }
     function ask(q) {
       addMsg(q, 'user');

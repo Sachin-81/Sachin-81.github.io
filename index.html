@@ -3,210 +3,287 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sachin Goudiperu — Cloud Security Engineer | AI Agents & Cloud Ops</title>
+<title>Sachin Goudiperu — Data & Cloud Security Engineer | AI Agents & Cloud Ops</title>
 <meta name="description" content="Data and Cloud Security Engineer @ The Home Depot. I build AI agents that run cloud ops — MCP servers, Claude Code, Akamai, GCP (GKE), Kubernetes, Azure.">
 <meta property="og:title" content="Sachin Goudiperu — I Build AI Agents That Run Cloud Ops">
 <meta property="og:description" content="Data & Cloud Security Engineer @ The Home Depot. MCP servers, AI-driven infrastructure, Akamai WAF/CDN, GCP (GKE), Kubernetes.">
-<meta property="og:image" content="sachin-studio.jpg">
+<meta property="og:image" content="assets/portrait-bw.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B1220'/><text x='50' y='66' font-size='44' font-family='Arial' font-weight='bold' fill='%23FF9E4A' text-anchor='middle'>SG</text></svg>">
+<link rel="icon" href="assets/portrait-bw.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0B1220; --card:#111C30; --line:#1E2C47;
-    --text:#E9EEF6; --muted:#9AA7BD; --orange:#FF9E4A; --blue:#60A5FA;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;line-height:1.6}
-  a{color:var(--blue);text-decoration:none}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-  nav{position:sticky;top:0;background:rgba(11,18,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
-  nav .brand{font-weight:700;font-size:18px;color:var(--text);letter-spacing:.2px}
-  nav .brand span{color:var(--orange)}
-  nav .links a{color:var(--muted);margin-left:22px;font-size:15px}
-  nav .links a:hover{color:var(--text)}
-  .hero-stage{position:relative;min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:48px 0 88px;background:radial-gradient(900px 760px at 82% 42%,rgba(38,64,110,.55),rgba(16,30,56,.25) 52%,transparent 78%),radial-gradient(700px 340px at 18% 28%,rgba(96,165,250,.10),transparent 60%),radial-gradient(560px 300px at 86% 18%,rgba(255,158,74,.09),transparent 60%)}
-  .hero-bg-name{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-weight:900;line-height:.94;letter-spacing:.01em;font-size:clamp(76px,15.5vw,224px);color:rgba(233,238,246,.05);-webkit-text-stroke:1px rgba(233,238,246,.06);pointer-events:none;user-select:none;z-index:0}
-  .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;width:100%}
-  .kline-1{font-size:clamp(17px,2.2vw,26px);font-weight:700;letter-spacing:.22em;color:var(--orange);margin-bottom:18px}
-  .kline-2{font-size:clamp(34px,4.8vw,60px);line-height:1.08;font-weight:800;letter-spacing:-.5px;color:var(--text)}
-  .kline-3{font-size:clamp(22px,3.1vw,38px);line-height:1.25;font-weight:700;color:var(--text);margin-top:18px}
-  .kline-3 span{color:var(--orange)}
-  .hero-sub{font-size:17px;color:var(--muted);margin-top:20px;max-width:54ch}
-  .hero-stage .cta{margin-top:30px}
-  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;margin:0 12px 10px 0;font-family:inherit;cursor:pointer;border:none}
-  .btn-primary{background:var(--orange);color:#131313}
-  .btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}
-  .btn[disabled]{opacity:.55;cursor:default}
-  .avatar-box{position:absolute;right:0;bottom:0;height:min(70%,600px);width:min(360px,36%);z-index:0}
-  .avatar-box video{width:100%;height:100%;display:block;object-fit:cover;object-position:center 24%}
-  #heroVideo{object-fit:contain;object-position:center top}
-  .avatar-box img{width:100%;height:100%;display:block;object-fit:contain;object-position:center bottom;transition:opacity .45s ease}
-  @keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.04)}}
-  .avatar-box::after{content:"";position:absolute;left:50%;bottom:1.5%;transform:translateX(-50%);width:64%;height:30px;background:radial-gradient(ellipse at center,rgba(0,0,0,.55),transparent 68%);filter:blur(5px);pointer-events:none}
-  .scroll-cue{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);z-index:1;color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
-  .scroll-cue:hover{color:var(--text)}
-  .scroll-cue .chev{display:block;width:14px;height:14px;border-right:2px solid var(--orange);border-bottom:2px solid var(--orange);transform:rotate(45deg);animation:cueBounce 1.8s ease-in-out infinite}
-  @keyframes cueBounce{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(4px,4px)}}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:36px 0 4px}
-  .stat{background:linear-gradient(180deg,#13203A,#0F1930);border:1px solid var(--line);border-radius:14px;padding:20px 22px;text-align:center}
-  .stat .num{font-size:30px;font-weight:800;color:var(--orange)}
-  .stat .lbl{color:var(--muted);font-size:14px;margin-top:4px}
-  section{padding:44px 0}
-  h2{font-size:30px;font-weight:800;letter-spacing:-.3px;margin-bottom:6px}
-  h2 .bar{display:block;width:56px;height:4px;background:var(--orange);border-radius:2px;margin-bottom:14px}
-  .sub{color:var(--muted);margin-bottom:24px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:18px}
-  .card h3{font-size:20px}
-  .card .meta{color:var(--orange);font-size:14px;font-weight:600;margin:2px 0 10px}
-  .card p,.card li{color:var(--muted);font-size:16px}
-  .card ul{margin-left:20px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .card.accent{border-color:rgba(255,158,74,.45);background:linear-gradient(180deg,#152238,#111C30)}
-  .chip{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:8px 16px;margin:0 8px 10px 0;font-size:14px}
-  .chip.ai{border-color:rgba(255,158,74,.55);color:var(--orange);font-weight:600}
-  footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px;text-align:center}
-  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
-
-  /* Reel-style life: speech bubble, wave rock, cursor-follow, timeline, draggable tags */
-
-  .caption{position:absolute;left:50%;bottom:26px;transform:translateX(-50%) translateY(8px);width:min(92%,560px);background:rgba(5,9,18,.82);color:#fff;font-size:16.5px;font-weight:600;line-height:1.5;text-align:center;padding:10px 18px;border-radius:12px;opacity:0;transition:opacity .3s ease,transform .3s ease;pointer-events:none;z-index:6}
-  .caption.show{opacity:1;transform:translateX(-50%) translateY(0)}
-  .bubble{position:absolute;top:9%;left:-8%;max-width:230px;background:#fff;color:#0b1220;font-size:14px;font-weight:600;line-height:1.45;padding:12px 14px;border-radius:16px;box-shadow:0 14px 34px rgba(0,0,0,.35);opacity:0;transform:scale(.6) translateY(8px);transform-origin:bottom right;transition:opacity .35s ease,transform .35s cubic-bezier(.2,1.6,.4,1);z-index:5;pointer-events:none}
-  .bubble::after{content:"";position:absolute;right:-7px;bottom:22px;border:8px solid transparent;border-left-color:#fff;border-right:0}
-  .bubble.show{opacity:1;transform:scale(1) translateY(0)}
-  @keyframes waveRock{0%,100%{transform:rotate(0deg)}25%{transform:rotate(1.6deg) translateY(-4px)}75%{transform:rotate(-1.2deg) translateY(2px)}}
-  .waving{animation:waveRock 1.1s ease-in-out 3;transform-origin:50% 92%}
-  @keyframes chipFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
-  .chip{animation:chipFloat 3.6s ease-in-out infinite;cursor:grab;touch-action:none;user-select:none}
-  .chip:active{cursor:grabbing}
-  .chip.drag{z-index:6;animation:none}
-  #experience .card{border-top:2px solid var(--line);position:relative}
-  #experience .card::before{content:"";position:absolute;top:-8px;left:22px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(255,154,61,.18)}
-  .drag-hint{color:var(--muted);font-size:13.5px;margin:-8px 0 18px}
-
-  /* v2 — main-character entrance edition */
-  .hero-stage{background:radial-gradient(880px 540px at 80% 26%,rgba(255,154,61,.16),transparent 62%),radial-gradient(760px 560px at 88% 52%,rgba(30,52,102,.55),transparent 70%),linear-gradient(180deg,#0a1226 0%,#0a1329 55%,#0a1226 100%)}
-  .avatar-box{animation:none}
-  #walkVideo{object-fit:contain;object-position:center bottom;transition:opacity .45s ease}
-  .kline-2{font-size:clamp(46px,6.4vw,88px);line-height:1.02;letter-spacing:-1px}
-  .roles{font-size:clamp(19px,2.3vw,28px);font-weight:800;line-height:1.45;margin-top:20px;color:var(--text)}
-  .roles span{display:block}
-  .roles span{color:var(--text)}
-  .roles span.accent{color:var(--orange)}
-  .caption{bottom:96px}
-  @media(max-width:820px){
-    .hero-stage{min-height:calc(100svh - 64px);padding:36px 0 84px}
-    .hero-inner{grid-template-columns:1fr;gap:26px;text-align:center}
-    .hero-sub{margin-left:auto;margin-right:auto}
-    .avatar-box{position:relative;width:100%;height:440px;flex:none;order:2}
-    .hero-inner{order:1}
-    .grid,.stats{grid-template-columns:1fr}
-    nav .links{display:none}
-  }
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    .scroll-cue .chev{animation:none}
-    .reveal{opacity:1;transform:none;transition:none}
-  }
-
-  /* AI assistant chat */
-  .chat-fab{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--orange);color:#131313;font-weight:800;font-size:15px;border:none;border-radius:999px;padding:14px 20px;cursor:pointer;box-shadow:0 12px 32px rgba(0,0,0,.45)}
-  .chat-fab:hover{filter:brightness(1.06)}
-  .chat-panel{position:fixed;right:22px;bottom:22px;z-index:61;width:min(384px,calc(100vw - 32px));height:min(560px,calc(100svh - 110px));background:#0C1730;border:1px solid #22345F;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.55);display:none;flex-direction:column;overflow:hidden}
-  .chat-panel.open{display:flex}
-  .chat-head{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#0A1226;border-bottom:1px solid #1D2C52}
-  .chat-head img{width:42px;height:42px;border-radius:50%;object-fit:cover;object-position:center top;background:#132344}
-  .chat-head .t1{font-weight:800;font-size:15px}
-  .chat-head .t2{font-size:12px;color:var(--muted)}
-  .chat-x{margin-left:auto;background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;line-height:1}
-  .chat-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
-  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.5;white-space:pre-wrap}
-  .msg.bot{background:#16264A;color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
-  .msg.user{background:var(--orange);color:#131313;font-weight:600;align-self:flex-end;border-bottom-right-radius:4px}
-  .msg a{color:#FFB37A}
-  .chat-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 10px}
-  .chip{background:#132344;color:var(--ink);border:1px solid #22345F;border-radius:999px;padding:7px 12px;font-size:12.5px;cursor:pointer}
-  .chip:hover{border-color:var(--orange)}
-  .chat-form{display:flex;gap:8px;padding:12px;border-top:1px solid #1D2C52;background:#0A1226}
-  .chat-form input{flex:1;background:#0C1730;border:1px solid #22345F;border-radius:10px;color:var(--ink);padding:11px 12px;font-size:14px;font-family:inherit}
-  .chat-form button{background:var(--orange);color:#131313;border:none;border-radius:10px;padding:0 16px;font-weight:800;cursor:pointer}
-  @media(max-width:560px){.chat-fab{right:14px;bottom:14px}.chat-panel{right:8px;bottom:8px}}
+:root{--bg:#FFFFFF;--soft:#FAFAFA;--ink:#111111;--red:#FF3038;--mut:#777777;--line:#E8E8E8;--card:#FAFAFA}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.brand,.role-line,.pre-name{font-family:'Archivo','Inter',system-ui,sans-serif}
+a{color:var(--ink)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+/* ---------- preloader ---------- */
+#preloader{position:fixed;inset:0;background:#fff;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:transform .7s cubic-bezier(.7,0,.2,1),opacity .5s ease;animation:preFailSafe .6s ease 3.2s forwards}
+#preloader.done{transform:translateY(-100%);opacity:.98}
+@keyframes preFailSafe{to{opacity:0;visibility:hidden}}
+.pre-name{font-size:clamp(26px,5.4vw,54px);font-weight:900;letter-spacing:.06em;color:var(--ink);display:flex;flex-wrap:wrap;justify-content:center}
+.pre-name span{opacity:0;transform:translateY(18px);animation:preLetter .45s ease forwards}
+.pre-name span.red{color:var(--red)}
+@keyframes preLetter{to{opacity:1;transform:none}}
+.pre-roles{font-size:12px;font-weight:700;letter-spacing:.3em;color:var(--mut);text-transform:uppercase;text-align:center;padding:0 16px}
+.pre-bar{width:min(260px,60vw);height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+.pre-bar i{display:block;height:100%;width:0;background:var(--red);transition:width .3s ease}
+.pre-label{font-size:10px;letter-spacing:.34em;color:var(--mut);font-weight:600}
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:50}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{font-weight:900;font-size:19px;letter-spacing:.02em}
+.brand span{color:var(--red)}
+nav .links a{color:#444;text-decoration:none;margin-left:24px;font-size:15px;font-weight:500}
+nav .links a:hover{color:var(--red)}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:calc(100svh - 64px);display:flex;align-items:stretch;overflow:hidden;background:#FAF7F2}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:20px;align-items:center;width:100%;padding-top:36px;padding-bottom:20px}
+.kicker{font-size:clamp(19px,2.4vw,28px);font-weight:800;letter-spacing:.24em;color:var(--ink)}
+.hero h1{font-size:clamp(46px,6.6vw,92px);line-height:.98;font-weight:900;letter-spacing:-1.5px;color:var(--red);margin-top:10px}
+.roles{margin-top:24px}
+.role-line{display:block;font-size:clamp(18px,2.3vw,27px);font-weight:800;line-height:1.5;letter-spacing:.01em}
+.role-line em{font-style:normal;color:var(--red)}
+.hero-sub{color:var(--mut);font-size:16.5px;margin-top:20px;max-width:52ch}
+.cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;font-family:inherit;border:2px solid var(--ink);background:#fff;color:var(--ink)}
+.btn-primary{background:var(--red);border-color:var(--red);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.hero-copy{position:relative;z-index:1}
+.hero-char{position:relative;z-index:5;display:flex;align-items:flex-end;justify-content:center;min-height:420px}
+.hero-char .char-wrap{position:relative;height:min(80svh,740px);max-width:100%}
+.hero-char img{height:100%;width:auto;max-width:100%;display:block;object-fit:contain;filter:none;cursor:pointer}
+.char-stage{position:relative;height:100%}
+#heroPhoto{transition:opacity .45s ease}
+#walkVideo{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:100%;width:auto;max-width:none;object-fit:contain;opacity:0;pointer-events:none;transition:opacity .45s ease;z-index:3}
+.char-wrap.walking #walkVideo{opacity:1}
+.char-wrap.walking #heroPhoto{opacity:0}
+#talkVideo{position:absolute;bottom:0;left:50%;transform:translateX(-50%);transform-origin:50% 100%;height:100%;width:auto;max-width:none;object-fit:contain;opacity:0;pointer-events:none;transition:opacity .45s ease;z-index:4}
+.char-wrap.talking #talkVideo{opacity:1}
+.char-wrap.talking #heroPhoto{opacity:0}
+.char-wrap.talking #walkVideo{opacity:0}
+/* Arrival handoff: the walk's last pose (3/4 turn, mid-step) and the
+   talk's first pose (frontal, planted) are different silhouettes, so
+   ANY dissolve between them double-exposes two figures (a .45s fade
+   ghosted for half a second; even .16s left one visible ghost frame).
+   During the arrival window only, switch the two video layers with a
+   true 0s cut — no intermediate opacity states exist, so no frame
+   can ever show a blended double figure (a .05s fade still left one
+   mid-cut blended frame on mobile) — while the photo keeps a .16s
+   fade for the no-talk fallback path. */
+.char-wrap.handoff #walkVideo,.char-wrap.handoff #talkVideo{transition-duration:0s}
+.char-wrap.handoff #heroPhoto{transition-duration:.16s}
+.cap-line{transition:opacity .3s ease}
+.cap-line.dim{opacity:.45}
+.bubble{position:absolute;top:1%;left:-94%;width:min(300px,78vw);background:var(--ink);color:#fff;font-size:14.5px;font-weight:600;line-height:1.5;padding:14px 16px;border-radius:16px;box-shadow:0 16px 36px rgba(17,17,17,.25);opacity:0;transform:scale(.7) translateY(10px);transform-origin:bottom right;transition:opacity .35s ease,transform .4s cubic-bezier(.2,1.5,.4,1);z-index:5;cursor:pointer}
+.bubble::after{content:"";position:absolute;right:-7px;bottom:26px;border:8px solid transparent;border-left-color:var(--ink);border-right:0}
+.bubble.show{opacity:1;transform:none}
+.bubble small{display:block;margin-top:8px;color:#FFB3B6;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+@keyframes waveRock{0%,100%{transform:rotate(0)}25%{transform:rotate(1.4deg) translateY(-4px)}75%{transform:rotate(-1deg) translateY(2px)}}
+.waving{animation:waveRock 1.1s ease-in-out 2;transform-origin:50% 92%}
+.scroll-cue{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);color:var(--mut);font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;z-index:3}
+/* ---------- sections ---------- */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:38px 0 2px}
+.stat{border:1px solid var(--line);background:var(--soft);border-radius:14px;padding:20px;text-align:center}
+.stat .num{font-family:'Archivo',sans-serif;font-size:30px;font-weight:900;color:var(--red)}
+.stat .lbl{color:var(--mut);font-size:14px;margin-top:2px}
+section{padding:52px 0;scroll-margin-top:78px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+h2{font-size:clamp(28px,3.6vw,40px);font-weight:900;letter-spacing:-.5px;line-height:1.12;margin-bottom:10px}
+.sub{color:var(--mut);margin-bottom:26px;max-width:68ch}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-bottom:18px}
+.card h3{font-size:20px;font-weight:800}
+.card .meta{color:var(--red);font-size:14px;font-weight:700;margin:3px 0 10px}
+.card p,.card li{color:#3D3D3D;font-size:16px}
+.card ul{margin-left:20px}
+.card ul li{margin-bottom:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card.accent{border-color:rgba(255,48,56,.4);background:#FFF7F7}
+.about-grid{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:start}
+.about-photo{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.about-photo img{width:100%;display:block}
+.theme{margin:18px 0 4px;font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.theme:first-of-type{margin-top:6px}
+.skill-group{margin-bottom:18px}
+.skill-group h3{font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.skill-group h3 span{color:var(--red)}
+.chip{display:inline-block;background:#fff;border:1px solid #DADADA;color:var(--ink);border-radius:999px;padding:7px 14px;margin:0 7px 9px 0;font-size:13.5px;font-weight:500}
+.chip.hot{border-color:rgba(255,48,56,.55);color:var(--red);font-weight:700}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+/* ---------- chat ---------- */
+.chat-fab{position:fixed;right:22px;bottom:22px;z-index:80;background:var(--red);color:#fff;font-weight:800;font-size:15px;border:none;border-radius:999px;padding:14px 20px;cursor:pointer;box-shadow:0 12px 30px rgba(255,48,56,.35);font-family:inherit;transition:transform .45s ease,opacity .45s ease}
+@media(max-width:900px){.chat-fab.fab-wait{transform:translateY(180%);opacity:0;pointer-events:none}}
+.chat-panel{position:fixed;right:22px;bottom:22px;z-index:81;width:min(384px,calc(100vw - 24px));height:min(560px,calc(100svh - 100px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(17,17,17,.22);display:none;flex-direction:column;overflow:hidden}
+.chat-panel.open{display:flex}
+.chat-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);background:var(--soft)}
+.chat-head img{width:42px;height:42px;border-radius:50%;object-fit:cover;object-position:center top}
+.chat-head .t1{font-weight:800;font-size:15px}
+.chat-head .t2{font-size:12px;color:var(--mut)}
+.chat-x{margin-left:auto;background:none;border:none;color:var(--mut);font-size:22px;cursor:pointer;line-height:1}
+.chat-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.5;white-space:pre-wrap}
+.msg.bot{background:var(--soft);border:1px solid var(--line);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.user{background:var(--red);color:#fff;font-weight:600;align-self:flex-end;border-bottom-right-radius:4px}
+.chat-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 10px}
+.chat-chips .chip{cursor:pointer;margin:0}
+.chat-chips .chip:hover{border-color:var(--red);color:var(--red)}
+.chat-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.chat-form input{flex:1;border:1px solid #DADADA;border-radius:10px;padding:11px 12px;font-size:14px;font-family:inherit;color:var(--ink)}
+.chat-form button{background:var(--red);color:#fff;border:none;border-radius:10px;padding:0 16px;font-weight:800;cursor:pointer;font-family:inherit}
+footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--mut);font-size:14px;text-align:center}
+.big-close{font-family:'Archivo',sans-serif;font-size:clamp(26px,4vw,44px);font-weight:900;line-height:1.15;letter-spacing:-.5px;max-width:22ch}
+.big-close span{color:var(--red)}
+/* ---------- responsive ---------- */
+@media(max-width:1180px){.bubble{left:-58%;width:264px}}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:8px;padding-top:28px;text-align:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .cta{justify-content:center}
+  .hero-char{min-height:0;margin-top:10px}
+  .hero-char .char-wrap{height:auto;display:flex;flex-direction:column;align-items:center}
+  .char-stage{height:min(44svh,460px);order:1}
+  .hero-char img{height:100%}
+  #walkVideo{height:100%}
+  #talkVideo{height:100%}
+  .bubble{position:relative;order:2;left:auto;right:auto;top:auto;width:min(340px,92vw);margin-top:12px;transform:scale(.85);transform-origin:top center}
+  .bubble.show{transform:scale(1)}
+  .bubble::after{right:44px;top:-7px;bottom:auto;border:8px solid transparent;border-bottom-color:var(--ink);border-top:0}
+  .about-grid{grid-template-columns:1fr}
+  .about-photo{max-width:380px}
+  .grid,.stats{grid-template-columns:1fr}
+  nav .links{display:none}
+}
+@media(max-width:560px){
+  .chat-fab{right:14px;bottom:14px}.chat-panel{right:8px;bottom:8px}
+  nav .wrap{height:56px}
+  .hero{min-height:calc(100svh - 56px)}
+  .hero-inner{padding-top:14px;gap:2px}
+  .kicker{font-size:15px}
+  .hero h1{font-size:38px;margin-top:6px}
+  .roles{margin-top:12px}
+  .role-line{font-size:15px;line-height:1.4}
+  .hero-sub{font-size:13.5px;margin-top:10px}
+  .hero .cta{margin-top:14px;gap:8px}
+  .hero .btn{padding:9px 15px;font-size:13.5px}
+  .hero-char{margin-top:6px}
+  .char-stage{height:31svh}
+  .bubble{font-size:13px;padding:11px 13px;margin-top:8px}
+  .scroll-cue{display:none}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  #preloader{display:none!important}
+  .reveal{opacity:1;transform:none;transition:none}
+  .waving{animation:none}
+}
 </style>
+<noscript><style>#preloader{display:none}.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
+<div id="preloader" aria-hidden="true">
+  <div class="pre-name" id="preName"></div>
+  <div class="pre-roles">Data &amp; Cloud Security Engineer · AI Agent Builder · MCP Server Creator</div>
+  <div class="pre-bar"><i id="preBarFill"></i></div>
+  <div class="pre-label">INITIALIZING EXPERIENCE</div>
+</div>
+
 <nav>
   <div class="wrap">
-    <div class="brand">Sachin <span>Goudiperu</span></div>
+    <div class="brand">SACHIN <span>GOUDIPERU</span></div>
     <div class="links">
-      <a href="#about">About</a><a href="#interview">Interview</a><a href="#ai">Selected Work</a><a href="#work">Experience</a><a href="#skills">Toolkit</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#ai">Selected Work</a><a href="#work">Experience</a><a href="#skills">Toolkit</a><a href="#interview">Interview</a><a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
-<header class="hero-stage">
-  <div class="hero-bg-name" aria-hidden="true"><span>SACHIN</span><span>GOUDIPERU</span></div>
-  <div class="avatar-box" id="heroAvatar">
-    <img id="heroPhoto" src="sachin-studio.jpg" alt="Sachin Goudiperu">
-    <div class="bubble" id="hiBubble">Hi! I'm Sachin — welcome to my portfolio.</div>
-  </div>
+<header class="hero">
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <p class="kline kline-1">HELLO, I'M</p>
-      <h1 class="kline kline-2">SACHIN<br>GOUDIPERU.</h1>
-      <div class="roles kline kline-3"><span>DATA &amp; CLOUD SECURITY ENGINEER.</span><span class="accent">AI AGENT BUILDER.</span><span>MCP SERVER CREATOR.</span></div>
+      <p class="kicker">HELLO, I'M</p>
+      <h1>SACHIN<br>GOUDIPERU.</h1>
+      <div class="roles">
+        <span class="role-line">DATA &amp; CLOUD SECURITY ENGINEER.</span>
+        <span class="role-line"><em>AI AGENT BUILDER.</em></span>
+        <span class="role-line">MCP SERVER CREATOR.</span>
+      </div>
       <p class="hero-sub">Data and Cloud Security Engineer @ The Home Depot — GCP (GKE) · Kubernetes · Akamai WAF/CDN · Azure · Terraform · MCP servers · Claude Code</p>
       <div class="cta">
         <button class="btn btn-primary" type="button" data-open-chat>Interview my portfolio</button>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/sachinvm1991" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="https://github.com/Sachin-81" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/sachinvm1991" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Sachin-81" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-char">
+      <div class="char-wrap" id="charWrap">
+        <div class="bubble" id="hiBubble" role="button" tabindex="0" aria-label="Play Sachin's greeting"><span class="cap-line" id="capLine1">Hey hi guys, my name is Sachin, and I'm working as a Data and Cloud Security Engineer at The Home Depot.</span> <span class="cap-line" id="capLine2">Welcome to my portfolio.</span><small id="bubbleHint">Tap for voice &#128266;</small></div>
+        <div class="char-stage">
+          <video id="walkVideo" muted playsinline preload="auto" poster="assets/hero-studio-cutout.png" aria-hidden="true">
+            <source src="assets/walk-alpha-hq.webm" type="video/webm">
+            <source src="assets/walk-cream-hq.mp4" type="video/mp4">
+          </video>
+          <video id="talkVideo" muted playsinline preload="auto" poster="assets/hero-studio-cutout.png" aria-hidden="true">
+            <source src="assets/talk-alpha-trim.webm" type="video/webm">
+          </video>
+          <img id="heroPhoto" src="assets/hero-studio-cutout.png" alt="Sachin Goudiperu, full body, wearing a navy hoodie, olive pants and white sneakers" title="Replay greeting">
+        </div>
+        <audio id="introVoice" src="assets/talk-voice-trim.mp3" preload="auto"></audio>
       </div>
     </div>
   </div>
-  <a class="scroll-cue" href="#about">Scroll<span class="chev" aria-hidden="true"></span></a>
+  <a class="scroll-cue" href="#about">Scroll ↓</a>
 </header>
 
 <div class="wrap">
   <div class="stats">
+    <div class="stat"><div class="num">70+</div><div class="lbl">Akamai CDN properties at The Home Depot</div></div>
+    <div class="stat"><div class="num">60M+</div><div class="lbl">Requests served a day across those properties</div></div>
     <div class="stat"><div class="num">190+</div><div class="lbl">AI-callable tools across my Akamai MCP setup</div></div>
-    <div class="stat"><div class="num">1 sentence</div><div class="lbl">Replaces ~20 clicks across multiple systems</div></div>
-    <div class="stat"><div class="num">Daily</div><div class="lbl">Claude Code + MCP servers in my real workflow</div></div>
   </div>
 
   <section id="about">
-    <h2><span class="bar"></span>The person behind the work</h2>
-    <div class="card reveal">
-      <p>I'm a Data &amp; Cloud Security Engineer at The Home Depot, with cloud experience across AWS, Azure and GCP. I'm AWS Certified (Solutions Architect – Associate), spent nearly two years working in Azure environments at Veracode and the Pennsylvania Turnpike Commission, and currently work in GCP day to day.</p>
-      <p style="margin-top:12px">At The Home Depot my work is GCP (GKE) clusters — tightening Kubernetes configs and fine-tuning Akamai WAF/CDN policies against the OWASP Top 10 so production traffic stays fast and secure, with Terraform for automation.</p>
-      <p style="margin-top:12px">Lately I'm deep into AI-driven ops. I build MCP servers that let AI assistants actually run infrastructure instead of just talking about it. I started from ALECS, a publicly available open-source Akamai MCP server, as a base — then remodeled it completely: changed the workflow end to end and shaped it for my workload instead of using it as it came. On top of that, I've created my own MCP servers built for the work I do. I'm also proficient in Claude Code, which I use daily along with these MCPs. What used to be 20 clicks in Control Center is now one sentence.</p>
-    </div>
-  </section>
-
-  
-  <section id="interview">
-    <p class="eyebrow reveal">AI Assistant</p>
-    <h2 class="reveal">Don't just read my portfolio. Interview it.</h2>
-    <p class="reveal">My portfolio speaks for me. The assistant below knows my work — ask it about my skills, the MCP servers I built, the ALECS rebuild, my experience, or how to reach me. It answers on the spot, any time.</p>
-    <div class="cta reveal" style="margin-top:18px">
-      <button class="btn btn-primary" type="button" data-open-chat>Ask my assistant</button>
+    <p class="eyebrow">About</p>
+    <h2>The person behind the work</h2>
+    <p class="sub">Cloud first, AI-driven — and a real person behind the keyboard.</p>
+    <div class="about-grid">
+      <div class="about-photo reveal"><img src="assets/portrait-bw.jpg" alt="Black and white portrait of Sachin Goudiperu in a turtleneck"></div>
+      <div class="card reveal" style="margin:0">
+        <p>I'm a Data &amp; Cloud Security Engineer at The Home Depot, with cloud experience across AWS, Azure and GCP. I'm AWS Certified (Solutions Architect – Associate), spent nearly two years working in Azure environments at Veracode and the Pennsylvania Turnpike Commission, and currently work in GCP day to day.</p>
+        <p style="margin-top:12px">At The Home Depot I help run 70+ Akamai CDN properties serving 60M+ requests a day — fine-tuning WAF/CDN policies against the OWASP Top 10 so production traffic stays fast and secure — alongside GCP (GKE) clusters, where I tighten Kubernetes configs, with Terraform for automation.</p>
+        <p style="margin-top:12px">Lately I'm deep into AI-driven ops. I build MCP servers that let AI assistants actually run infrastructure instead of just talking about it — more on that in Selected Work below.</p>
+        <p style="margin-top:12px">Off the clock: you'll find me in the gym, out on the bike, or collecting sneakers.</p>
+      </div>
     </div>
   </section>
 
   <section id="ai">
-    <h2><span class="bar"></span>Selected work</h2>
+    <p class="eyebrow">Selected Work</p>
+    <h2>AI that operates infrastructure</h2>
     <p class="sub">This is where my work is heading: AI that doesn't just answer questions, it operates infrastructure.</p>
     <div class="grid">
       <div class="card accent reveal">
-        <h3>ALECS — Remodeled End to End</h3>
-        <div class="meta">Akamai MCP Server · 190+ tools</div>
-        <p>Started from the open-source ALECS server as a base and remodeled it completely — the workflow, the tooling, how it runs in my setup. CDN properties, DNS, SSL certs, WAF and security events, all callable by an AI assistant. Twenty Control Center clicks became one sentence.</p>
+        <h3>MCP Automation Platform</h3>
+        <div class="meta">Akamai ops, run by AI</div>
+        <p>An MCP automation platform integrating Akamai CDN, WAF/Security, Edge DNS, Grafana/Hydrolix, ServiceNow ITSM and mPulse RUM — enabling AI-assisted operations for property management, security investigations and incident triage. What used to be ~20 clicks in Control Center is now one sentence.</p>
       </div>
       <div class="card accent reveal">
+        <h3>ALECS — Remodeled End to End</h3>
+        <div class="meta">Akamai MCP Server · 190+ tools</div>
+        <p>ALECS is an open-source Akamai MCP server that I took only as a base and remodeled completely end to end — I did not run it as it came. On top of that, I built my own MCP servers tailored to my workload, and I use Claude Code daily. CDN properties, DNS, SSL certs, WAF and security events, all callable by an AI assistant.</p>
+      </div>
+      <div class="card reveal">
         <h3>MCP Servers I Created</h3>
         <div class="meta">Built for my workload</div>
-        <p>Servers I designed and built myself around the work I actually do — including mPulse MCP for real user monitoring data and a Bot Traffic Tester that shows how AI bots interact with our edge before they surprise us in production.</p>
+        <p>Servers I designed and built myself around the work I actually do — including an mPulse MCP for real user monitoring data and a Bot Traffic Tester that shows how AI bots interact with our edge before they surprise us in production.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Slack IP Check Bot</h3>
+        <div class="meta">/check-ip · 24/7 security investigations</div>
+        <p>A Slack bot I built for 24/7 automated security investigations — the /check-ip command lets L1 support resolve customer complaints about blocked requests quickly, without waiting on me.</p>
       </div>
       <div class="card reveal">
         <h3>One Sentence, Multiple Systems</h3>
@@ -222,15 +299,39 @@
   </section>
 
   <section id="work">
-    <h2><span class="bar"></span>The road so far</h2>
+    <p class="eyebrow">Experience</p>
+    <h2>The road so far</h2>
     <div class="card reveal">
       <h3>Data and Cloud Security Engineer — The Home Depot</h3>
       <div class="meta">Oct 2025 – Present · Atlanta, GA · Remote</div>
+      <p class="theme">CDN Ops &amp; Property Manager</p>
       <ul>
-        <li>GCP (GKE) clusters — tightening Kubernetes configs for production workloads</li>
-        <li>Akamai WAF/CDN policy tuning, including OWASP Top 10 protections</li>
-        <li>Terraform automation for repeatable, safe infrastructure changes</li>
-        <li>AI-driven ops with MCP servers and Claude Code in the daily workflow</li>
+        <li>Administer 70+ Akamai CDN properties serving 60M+ daily requests — daily activations, version management, staging/production deployments for www.homedepot.com, API, mobile and static domains</li>
+        <li>Migrated legacy properties from Akamai DSA to Ion Premier — updated rule trees, reconfigured origin settings, validated functionality post-migration</li>
+        <li>Onboard new domains end to end: properties from templates, edge hostnames, DNS cutover — and manage GTM failover and load distribution across data centers</li>
+      </ul>
+      <p class="theme">WAF &amp; Bot Security</p>
+      <ul>
+        <li>Bot Manager Premium: custom bot categories including AI traffic (ChatGPT, Claude, Perplexity), custom known-bots list, blocked device IDs, browser-impersonator mitigation</li>
+        <li>Custom WAF rules from match conditions — targeting attack signatures while letting business-critical traffic (payment processors, partner APIs) through; weekly rule reviews and precision false-positive exceptions</li>
+        <li>Rate policies, URL protection, Behavioral DDoS engine and reputation profiles; OWASP Top 10 triage from SIEM events; IP Geo firewall, network and client lists</li>
+      </ul>
+      <p class="theme">Performance</p>
+      <ul>
+        <li>Cache-hit improvements through cache-key analysis, query-string stripping and TTLs by content type; origin optimization with persistent connections and SureRoute</li>
+        <li>Grafana dashboards for RPS, error rates, cache hit ratio and geographic distribution, integrated with Hydrolix; mPulse RUM data for page-load and Core Web Vitals analysis</li>
+        <li>Monthly KPI and traffic reports from the Akamai Reporting API for stakeholder reviews</li>
+      </ul>
+      <p class="theme">Incidents &amp; On-Call</p>
+      <ul>
+        <li>24/7 on-call for Akamai CDN infrastructure — PagerDuty alerts answered within SLA, P1 incident bridges led across CDN, origin and application teams, documented root-cause analysis</li>
+        <li>Live traffic analysis during incidents — Pragma headers, curl debugging and DataStream logs to isolate CDN vs WAF vs origin; emergency time-bound WAF exceptions to restore service</li>
+        <li>SSL certificate renewals for www.homedepot.com through CPS; monthly Adaptive Security Engine upgrades tested in staging first; automated rollback procedures for failed activations</li>
+      </ul>
+      <p class="theme">AI Automation</p>
+      <ul>
+        <li>Built the MCP automation platform tying Akamai, Grafana/Hydrolix, ServiceNow and mPulse together for AI-assisted ops and incident triage</li>
+        <li>Built the Slack IP Check Bot (/check-ip) for 24/7 automated security investigations; ServiceNow change tickets with risk assessments and rollback plans; SOPs published in Confluence</li>
       </ul>
     </div>
     <div class="card reveal">
@@ -256,79 +357,316 @@
   </section>
 
   <section id="skills">
-    <h2><span class="bar"></span>The toolkit behind it</h2>
-    <p class="drag-hint">Psst — the skill tags move. Grab one and throw it around.</p>
-    <p class="sub">AI and automation first — that's the work I do every day:</p>
-    <div>
-      <span class="chip ai">AI Agents</span><span class="chip ai">MCP Servers</span><span class="chip ai">Claude Code</span><span class="chip ai">AI-Driven Cloud Ops</span><span class="chip ai">LLM Tooling</span><span class="chip ai">Prompt-Driven Automation</span>
-    </div>
-    <div style="margin-top:8px">
-      <span class="chip">GCP (GKE)</span><span class="chip">Kubernetes</span><span class="chip">Akamai WAF/CDN</span><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">Terraform</span><span class="chip">Docker</span><span class="chip">CI/CD</span><span class="chip">PowerShell</span><span class="chip">Okta</span><span class="chip">ServiceNow</span><span class="chip">Grafana</span><span class="chip">BigQuery</span>
-    </div>
-    <div class="card reveal" style="margin-top:18px">
+    <p class="eyebrow">Skills</p>
+    <h2>The toolkit behind it</h2>
+    <p class="sub">Grouped the way I actually use them — Akamai and cloud security at the core, AI automation on top.</p>
+    <div class="skill-group reveal"><h3><span>01</span> CDN Technologies</h3>
+      <span class="chip">Property Manager</span><span class="chip">Ion Premier</span><span class="chip">CP Codes</span><span class="chip">Edge Hostnames</span><span class="chip">Cloudlets</span><span class="chip">Site Shield</span><span class="chip">SureRoute</span><span class="chip">DataStream</span><span class="chip">Image Manager</span><span class="chip">Edge Redirector</span><span class="chip">Application Load Balancer</span><span class="chip">GTM</span></div>
+    <div class="skill-group reveal"><h3><span>02</span> Akamai Security</h3>
+      <span class="chip">Akamai WAF</span><span class="chip">Bot Manager Premium</span><span class="chip">Network Lists</span><span class="chip">Client Lists</span><span class="chip">Rate Policies</span><span class="chip">URL Protection</span><span class="chip">Reputation Profiles</span><span class="chip">IP Geo Firewall</span><span class="chip">Behavioral DDoS Engine</span><span class="chip">Content Protector (ACP)</span><span class="chip">CSPC / CPC</span><span class="chip">TEP</span><span class="chip">TLS Fingerprinting</span></div>
+    <div class="skill-group reveal"><h3><span>03</span> Security &amp; Compliance</h3>
+      <span class="chip">OWASP Top 10</span><span class="chip">SQL Injection</span><span class="chip">Cross-Site Scripting (XSS)</span><span class="chip">Path Traversal</span><span class="chip">DDoS Mitigation</span><span class="chip">Bot Protection</span><span class="chip">PCI Compliance</span><span class="chip">Security Incident Response</span><span class="chip">SIEM Analysis</span></div>
+    <div class="skill-group reveal"><h3><span>04</span> Monitoring &amp; Analytics</h3>
+      <span class="chip">Grafana</span><span class="chip">Hydrolix</span><span class="chip">Akamai Reporting API</span><span class="chip">mPulse</span><span class="chip">Web Security Analytics (WSA)</span><span class="chip">DataStream Logs</span><span class="chip">PagerDuty</span></div>
+    <div class="skill-group reveal"><h3><span>05</span> Tools &amp; Platforms</h3>
+      <span class="chip">Akamai Control Center</span><span class="chip">CPS · SSL</span><span class="chip">Error Translator</span><span class="chip">URL Health Check</span><span class="chip">ServiceNow</span><span class="chip">Confluence</span><span class="chip">Git</span><span class="chip">curl</span><span class="chip">HAR Analysis</span></div>
+    <div class="skill-group reveal"><h3><span>06</span> Cloud &amp; Infrastructure</h3>
+      <span class="chip hot">Claude Code / MCP</span><span class="chip hot">AI Agents</span><span class="chip">GCP (GKE)</span><span class="chip">Kubernetes</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Terraform</span><span class="chip">DNS</span><span class="chip">Load Balancers</span><span class="chip">SSL Certificates</span><span class="chip">APIs</span><span class="chip">Docker</span><span class="chip">CI/CD</span></div>
+    <div class="card reveal" style="margin-top:20px">
       <h3>AWS Certified Solutions Architect – Associate</h3>
       <div class="meta">Amazon Web Services · Issued Jun 2024 · Expires Jun 2027</div>
       <p>Also: two-time "Caught Orange Handed" recognition award winner at The Home Depot.</p>
     </div>
   </section>
 
+  <section id="interview">
+    <p class="eyebrow">AI Assistant</p>
+    <h2>Don't just read my portfolio. Interview it.</h2>
+    <p class="sub" style="margin-bottom:18px">My portfolio speaks for me. The assistant below knows my work — ask it about my Akamai scale, bot management, WAF work, on-call life, the MCP platform I built, or how to reach me. It answers on the spot, any time.</p>
+    <button class="btn btn-primary" type="button" data-open-chat>Ask my assistant</button>
+  </section>
+
   <section id="contact">
-    <h2><span class="bar"></span>Contact</h2>
-    <div class="card reveal">
-      <p>Always happy to talk cloud security, Kubernetes, Claude Code, or getting AI agents to do real work.</p>
-      <div class="cta" style="margin-top:16px">
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/sachinvm1991" target="_blank" rel="noopener">Connect on LinkedIn</a>
-        <a class="btn btn-ghost" href="https://github.com/Sachin-81" target="_blank" rel="noopener">See my GitHub</a>
-      </div>
+    <p class="eyebrow">Contact</p>
+    <p class="big-close">Let's talk cloud security — <span>or AI agents that do real work.</span></p>
+    <p class="sub" style="margin-top:14px">Always happy to talk cloud security, Kubernetes, Claude Code, or getting AI agents to do real work.</p>
+    <div class="cta" style="margin-top:6px">
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/sachinvm1991" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn" href="https://github.com/Sachin-81" target="_blank" rel="noopener">See my GitHub</a>
     </div>
   </section>
 </div>
 
-<footer>© 2026 Sachin Goudiperu · Atlanta, GA · Built with an AI that does the clicking</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script>
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), {threshold: .12});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // Hero entrance — avatar slides in, intro lines build one by one.
-  // Fallback: if GSAP fails to load, or the visitor prefers reduced motion,
-  // everything simply stays in its natural, fully visible state.
-  (function () {
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced || typeof gsap === 'undefined') return;
-    var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.from('#heroAvatar', { x: 180, opacity: 0, duration: 1.15 })
-      .from('.kline-1', { y: 26, opacity: 0, duration: .55 }, '-=0.55')
-      .from('.kline-2', { y: 36, opacity: 0, duration: .65 }, '-=0.28')
-      .from('.kline-3', { y: 26, opacity: 0, duration: .55 }, '-=0.32')
-      .from('.hero-sub', { y: 16, opacity: 0, duration: .5 }, '-=0.25')
-      .from('.hero-stage .cta', { y: 14, opacity: 0, duration: .5 }, '-=0.3')
-      .from('.scroll-cue', { opacity: 0, duration: .6 }, '-=0.2');
-  })();
-
-</script>
+<footer>© 2026 Sachin Goudiperu · Atlanta, GA · Data &amp; Cloud Security Engineer @ The Home Depot</footer>
 
 <button class="chat-fab" id="chatFab" type="button">💬 Interview my portfolio</button>
 <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat with Sachin's AI assistant">
   <div class="chat-head">
-    <img src="sachin-studio.jpg" alt="Sachin">
-    <div>
-      <div class="t1">Sachin's AI Assistant</div>
-      <div class="t2">Ask about skills, projects, experience</div>
-    </div>
+    <img src="assets/portrait-bw.jpg" alt="Sachin">
+    <div><div class="t1">Sachin's AI Assistant</div><div class="t2">Ask about skills, projects, experience</div></div>
     <button class="chat-x" id="chatClose" type="button" aria-label="Close chat">×</button>
   </div>
   <div class="chat-msgs" id="chatMsgs"></div>
   <div class="chat-chips" id="chatChips"></div>
   <form class="chat-form" id="chatForm">
-    <input id="chatInput" type="text" placeholder="Ask about Sachin…" autocomplete="off">
+    <input id="chatInput" type="text" placeholder="Ask about Sachin…" autocomplete="off" aria-label="Ask about Sachin">
     <button type="submit">Send</button>
   </form>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script>
-  // Portfolio assistant — answers visitor questions about Sachin from a
-  // built-in knowledge base drawn from this page. Runs fully on-device.
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* --- preloader --- */
+  var pre = document.getElementById('preloader');
+  var nameBox = document.getElementById('preName');
+  var fill = document.getElementById('preBarFill');
+  var NAME = 'SACHIN GOUDIPERU';
+  NAME.split('').forEach(function(ch,i){
+    var s=document.createElement('span');
+    s.textContent = ch === ' ' ? '\u00A0' : ch;
+    s.style.animationDelay = (i*45)+'ms';
+    if(i>=6) s.className='red';
+    nameBox.appendChild(s);
+  });
+  var done=false;
+  function finishPreloader(){
+    if(done) return; done=true;
+    if(fill) fill.style.width='100%';
+    setTimeout(function(){
+      if(pre){ pre.classList.add('done'); setTimeout(function(){ pre.style.display='none'; },760); }
+      document.dispatchEvent(new Event('heroenter'));
+    }, 180);
+  }
+  if(reduced){ if(pre) pre.style.display='none'; document.dispatchEvent(new Event('heroenter')); }
+  else {
+    var p=0; var iv=setInterval(function(){ p=Math.min(92,p+Math.random()*22); if(fill) fill.style.width=p+'%'; if(p>=92) clearInterval(iv); },260);
+    window.addEventListener('load', function(){ setTimeout(finishPreloader, 900); });
+    setTimeout(finishPreloader, 2500); /* hard timeout fallback */
+  }
+  /* --- reveals --- */
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); }); }, {threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  /* --- hero entrance: walk-in, then greeting bubble + voice --- */
+  var bubble = document.getElementById('hiBubble');
+  var photo = document.getElementById('heroPhoto');
+  var wrap = document.getElementById('charWrap');
+  var walkVideo = document.getElementById('walkVideo');
+  var voice = document.getElementById('introVoice');
+  var cap1 = document.getElementById('capLine1');
+  var cap2 = document.getElementById('capLine2');
+  var hint = document.getElementById('bubbleHint');
+  var greeted=false, arrived=false;
+  if(cap2) cap2.classList.add('dim');
+  function setHint(t){ if(hint) hint.innerHTML = t; }
+  function showTapForVoice(){ setHint('Tap for voice &#128266;'); }
+  /* --- talking intro: the figure himself speaks (lip-synced clip) ---
+     talk-voice-trim.mp3 is the talk clip's OWN audio, trimmed to end
+     cleanly right after "...portfolio." (speech ends ~8.95s; the clip's
+     tail laugh at 9.30-9.82s is cut; 0.25s fade-out, ends 9.21s). The
+     talk video is trimmed to the same 9.21s so 'ended' fires the
+     crossfade back to the standing cutout with no laugh frames.
+     Captions follow whichever clock is running (talk video, or the
+     voice in the voice-only fallback). "Welcome to my portfolio."
+     starts at ~7.6s in this clip (measured pause in the waveform). */
+  var talkVideo = document.getElementById('talkVideo');
+  var CAP_SWITCH = 7.6;
+  var talking = false, talkClock = null;
+  function resetCaptions(){
+    if(cap1) cap1.classList.remove('dim');
+    if(cap2) cap2.classList.add('dim');
+  }
+  function updateCaptions(t){
+    if(t >= CAP_SWITCH){ if(cap1) cap1.classList.add('dim'); if(cap2) cap2.classList.remove('dim'); }
+  }
+  /* The talk clip's camera pushes in ~1.4x while he speaks; counter-scale
+     the element so his on-screen size stays matched to the standing
+     cutout (constants measured from the keyed frames). */
+  var TALK_S0 = 1.08, TALK_Z = 1.35;
+  /* --- end-of-talk head lock (v8 fix) ---
+     Measured head geometry (bbox centres, fractions of each frame):
+     the standing cutout's head vs the talk clip's head in its final
+     frames. The talk camera push-in leaves his head ~1.26x too big and
+     ~0.37 stage-heights too low vs the cutout, so a plain opacity
+     crossfade at the end showed TWO heads — a large fading talk head
+     offset from the cutout's head (the "ghost ear" beside his head).
+     Fix: over the last ~1.15s of the talk, ease the talk layer to the
+     exact scale/offset that locks its head onto the cutout's head
+     (computed live from layout, so it holds at any viewport), then let
+     the opacity crossfade run with the heads coincident. */
+  var PHOTO_HEAD = { cx: 0.5348, cy: 0.0579, w: 0.3022 };
+  var TALK_HEAD_END = { cx: 0.5145, cy: 0.1001, w: 0.2813 }; /* final frame (221) — the frame the fade actually shows */
+  var talkResetTimer = null;
+  function talkEndBlend(ct, dur){
+    if(!isFinite(dur) || dur <= 0) return 0;
+    var b = (ct - (dur - 1.15)) / 1.0;
+    if(b <= 0) return 0;
+    if(b >= 1) return 1;
+    return b * b * (3 - 2 * b); /* smoothstep */
+  }
+  function talkScaleLoop(){
+    if(!talking || !talkVideo) return;
+    var d = talkVideo.duration || 10;
+    var ct = talkVideo.currentTime || 0;
+    var t = Math.min(1, ct / d);
+    var s = TALK_S0 * (1 + (1 / TALK_Z - 1) * t);
+    var b = talkEndBlend(ct, talkVideo.duration);
+    if(b > 0 && photo && photo.offsetWidth){
+      var stage = talkVideo.offsetParent;
+      var stageW = stage ? stage.clientWidth : 0;
+      var stageH = stage ? stage.clientHeight : 0;
+      var tw = talkVideo.offsetWidth, th = talkVideo.offsetHeight;
+      if(stageW && tw){
+        var pCx = photo.offsetLeft + PHOTO_HEAD.cx * photo.offsetWidth;
+        var pCy = photo.offsetTop + PHOTO_HEAD.cy * photo.offsetHeight;
+        var pW = PHOTO_HEAD.w * photo.offsetWidth;
+        var sT = pW / (TALK_HEAD_END.w * tw); /* scale that matches head widths */
+        var S = s + (sT - s) * b;
+        var hCx = stageW / 2 + (TALK_HEAD_END.cx - 0.5) * tw * S;
+        var hCy = stageH - (1 - TALK_HEAD_END.cy) * th * S;
+        var dx = (pCx - hCx) * b;
+        var dy = (pCy - hCy) * b;
+        talkVideo.style.transform = 'translateX(-50%) translate(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px) scale(' + S.toFixed(3) + ')';
+        if(!talkVideo.paused && !talkVideo.ended) requestAnimationFrame(talkScaleLoop);
+        return;
+      }
+    }
+    talkVideo.style.transform = 'translateX(-50%) scale(' + s.toFixed(3) + ')';
+    if(!talkVideo.paused && !talkVideo.ended) requestAnimationFrame(talkScaleLoop);
+  }
+  function playVoice(){
+    if(!voice) return false;
+    try{
+      voice.currentTime = 0;
+      var pr = voice.play();
+      if(pr && pr.catch){ pr.catch(function(){ showTapForVoice(); }); }
+      return true;
+    }catch(e){ showTapForVoice(); return false; }
+  }
+  if(voice){
+    voice.addEventListener('playing', function(){
+      setHint('Playing my intro &#128266;');
+      if(talkClock === 'voice') return;
+      if(!talking) talkClock = 'voice';
+    });
+    voice.addEventListener('timeupdate', function(){ if(talkClock === 'voice') updateCaptions(voice.currentTime); });
+    voice.addEventListener('ended', function(){ if(!talking) setHint('Tap to replay &#8635;'); });
+  }
+  function finishTalk(){
+    if(!talking) return; talking = false;
+    if(wrap) wrap.classList.remove('talking');
+    if(talkVideo){
+      try{ talkVideo.pause(); }catch(e){}
+      /* Keep the head-locked end transform for the whole crossfade —
+         resetting it here used to snap the talk layer from scale .80
+         back to 1.0 the instant the fade started (a visible size pop,
+         then a big offset head dissolving over the cutout). Only reset
+         once the layer is fully transparent. */
+      if(talkResetTimer) clearTimeout(talkResetTimer);
+      talkResetTimer = setTimeout(function(){
+        if(!talking && talkVideo) talkVideo.style.transform = 'translateX(-50%) scale(' + TALK_S0 + ')';
+      }, 650);
+    }
+    setHint('Tap to replay &#8635;');
+  }
+  function startTalk(fromTap){
+    if(!bubble) return;
+    resetCaptions();
+    if(reduced && !fromTap){ showTapForVoice(); return; } /* reduced-motion: nothing autoplays; tap plays voice */
+    playVoice();
+    if(reduced || !talkVideo){ talkClock = 'voice'; return; } /* reduced-motion / no element: voice + cutout */
+    talking = true; talkClock = 'talk';
+    if(talkResetTimer){ clearTimeout(talkResetTimer); talkResetTimer = null; }
+    if(wrap) wrap.classList.add('talking');
+    try{
+      talkVideo.currentTime = 0;
+      talkVideo.style.transform = 'translateX(-50%) scale(' + TALK_S0 + ')';
+      var pr = talkVideo.play();
+      if(pr && pr.catch){ pr.catch(function(){ finishTalk(); talkClock = 'voice'; showTapForVoice(); }); }
+    }catch(e){ finishTalk(); talkClock = 'voice'; }
+    /* If the talk video stalls (e.g. Safari has no VP9-alpha), fall back
+       to the standing cutout + voice-on-tap rather than a frozen figure. */
+    setTimeout(function(){
+      if(talking && talkVideo && (talkVideo.readyState < 2 || talkVideo.paused)){
+        finishTalk(); talkClock = null; showTapForVoice();
+      }
+    }, 1500);
+    if(talkVideo) requestAnimationFrame(talkScaleLoop);
+  }
+  if(talkVideo){
+    talkVideo.addEventListener('timeupdate', function(){ if(talkClock === 'talk') updateCaptions(talkVideo.currentTime); });
+    talkVideo.addEventListener('ended', function(){ finishTalk(); });
+    talkVideo.addEventListener('error', function(){ if(talking){ finishTalk(); talkClock = 'voice'; } }, true);
+  }
+  function greet(fromTap){
+    if(!bubble) return;
+    bubble.classList.add('show');
+    startTalk(!!fromTap);
+    clearTimeout(greet._t);
+    greet._t=setTimeout(function(){ bubble.classList.remove('show'); }, 12500);
+  }
+  function arrive(){
+    if(arrived) return; arrived=true;
+    if(wrap){
+      wrap.classList.add('handoff');
+      setTimeout(function(){ if(wrap) wrap.classList.remove('handoff'); }, 340);
+    }
+    if(wrap) wrap.classList.remove('walking');
+    if(walkVideo){ try{ walkVideo.pause(); }catch(e){} }
+    greet();
+  }
+  function startWalk(){
+    if(!walkVideo || !wrap) return;
+    wrap.classList.add('walking');
+    try{
+      walkVideo.currentTime = 0;
+      /* Sync the clip (5.5s) to the 5.2s GSAP travel so he arrives on
+         the clip's final, most-frontal frame instead of mid-stride. */
+      if(isFinite(walkVideo.duration) && walkVideo.duration > 0) walkVideo.playbackRate = walkVideo.duration / 5.2;
+      var pr = walkVideo.play();
+      if(pr && pr.catch){ pr.catch(function(){ wrap.classList.remove('walking'); }); }
+    }catch(e){ wrap.classList.remove('walking'); }
+  }
+  if(walkVideo){
+    walkVideo.addEventListener('loadedmetadata', function(){
+      if(isFinite(walkVideo.duration) && walkVideo.duration > 0) walkVideo.playbackRate = walkVideo.duration / 5.2;
+    });
+  }
+  if(walkVideo){ walkVideo.addEventListener('error', function(){ if(wrap) wrap.classList.remove('walking'); }, true); }
+  function replay(){ /* replay = talk only (he does not re-walk) */
+    if(!bubble) return;
+    bubble.classList.remove('show');
+    finishTalk();
+    if(voice){ try{ voice.pause(); }catch(e){} }
+    setTimeout(function(){ greet(true); }, 220);
+  }
+  if(bubble){ bubble.addEventListener('click', replay); bubble.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); replay(); } }); }
+  if(photo){ photo.addEventListener('click', replay); }
+  document.addEventListener('heroenter', function(){
+    if(greeted) return; greeted=true;
+    if(!reduced && typeof gsap !== 'undefined'){
+      /* Text builds first; then he WALKS left-to-right in front of the
+         name text (real walk-cycle clip), and on arrival crossfades to
+         the lip-synced TALKING clip — he says the intro himself, with
+         his own voice (the talk clip's audio), then settles back to
+         the standing cutout. */
+      var travel = -Math.min(window.innerWidth * 0.62, 920);
+      var tl = gsap.timeline({defaults:{ease:'power3.out'}});
+      tl.from('.kicker', {y:24, opacity:0, duration:.45})
+        .from('.hero h1', {y:34, opacity:0, duration:.55}, '-=0.2')
+        .from('.role-line', {y:22, opacity:0, duration:.45, stagger:.1}, '-=0.25')
+        .from('.hero-sub', {y:16, opacity:0, duration:.4}, '-=0.2')
+        .from('.hero .cta', {y:14, opacity:0, duration:.4}, '-=0.2')
+        .fromTo('#charWrap', {x:travel}, {x:0, duration:5.2, ease:'power1.inOut', onStart:startWalk, onComplete:arrive}, '+=0.1');
+      setTimeout(function(){ if(!arrived) arrive(); }, 9000); /* safety: never leave him mid-walk */
+    } else { arrived=true; greet(); }
+  });
+})();
+</script>
+<script>
+  // Portfolio assistant — answers from a built-in knowledge base drawn from
+  // this page. Runs fully on-device, no network calls.
   (function () {
     var fab = document.getElementById('chatFab');
     var panel = document.getElementById('chatPanel');
@@ -338,29 +676,55 @@
     var form = document.getElementById('chatForm');
     var input = document.getElementById('chatInput');
     if (!fab || !panel) return;
+    /* On small screens keep the FAB tucked away whenever the hero
+       walk/talk/greeting is on screen, so it can never overlap the
+       greeting bubble. (The old 8s timeout revealed it mid-talk: the
+       mobile hero sequence runs ~17s, so the FAB slid back on top of
+       the bubble and covered its hint line.) Now the FAB's visibility
+       simply tracks the hero state — including replays — and it is
+       always available once the visitor scrolls into the content. */
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      fab.classList.add('fab-wait');
+      var fabSync = function () {
+        var b = document.getElementById('hiBubble');
+        var w = document.getElementById('charWrap');
+        var busy = !!((b && b.classList.contains('show')) ||
+                      (w && (w.classList.contains('talking') || w.classList.contains('walking'))));
+        if (window.scrollY > 120) busy = false;
+        fab.classList.toggle('fab-wait', busy);
+      };
+      window.addEventListener('scroll', fabSync, { passive: true });
+      setInterval(fabSync, 400);
+      fabSync();
+    }
     var greeted = false;
-
     var KB = [
-      { k: ['alecs'], a: "ALECS is an open-source Akamai MCP server that Sachin took as a base and remodeled completely — the workflow changed end to end and the setup was reshaped for his workload; he did not run it as it came. It exposes 190+ AI-callable tools across Akamai CDN properties, DNS, SSL certificates, WAF and security events. What used to take ~20 clicks in Control Center is now one sentence." },
-      { k: ['mcp', 'server', 'servers', 'built', 'build', 'created', 'create'], a: "Sachin builds MCP (Model Context Protocol) servers that let AI assistants actually run infrastructure. Beyond the ALECS rebuild, he created his own MCP servers for his workload — including an mPulse MCP for real-user monitoring data and a Bot Traffic Tester that shows how AI bots interact with the edge before they surprise anyone in production." },
+      { k: ['bot manager premium', 'bot manager', 'bots', 'bot traffic', 'crawler', 'impersonator', 'ai traffic'], a: "Sachin runs Bot Manager Premium at The Home Depot — custom bot categories (including an AI-traffic category for ChatGPT, Claude and Perplexity crawlers), a custom known-bots list, blocked device IDs and browser-impersonator mitigation, backed by rate policies, URL protection, Behavioral DDoS and reputation profiles. He also built a Bot Traffic Tester MCP that shows how AI bots interact with the edge before they surprise anyone in production." },
+      { k: ['scale', 'how many properties', 'requests a day', 'requests per day', 'traffic volume', '70+', '60m'], a: "At The Home Depot Sachin administers 70+ Akamai CDN properties serving 60M+ requests a day — www.homedepot.com, API, mobile and static domains — with daily activations and version management across staging (qa74) and production." },
+      { k: ['alecs'], a: "ALECS is an open-source Akamai MCP server that Sachin took only as a base and remodeled completely end to end — he did not run it as it came. On top of that he built his own MCP servers tailored to his workload, and he uses Claude Code daily. The setup exposes 190+ AI-callable tools across Akamai CDN properties, DNS, SSL certificates, WAF and security events. What used to take ~20 clicks in Control Center is now one sentence." },
+      { k: ['mcp platform', 'automation platform'], a: "Sachin built an MCP automation platform integrating Akamai CDN, WAF/Security, Edge DNS, Grafana/Hydrolix, ServiceNow ITSM and mPulse RUM — enabling AI-assisted operations for property management, security investigations and incident triage." },
+      { k: ['mcp', 'server', 'servers', 'built', 'build', 'created', 'create'], a: "Sachin builds MCP (Model Context Protocol) servers that let AI assistants actually run infrastructure. Beyond the ALECS rebuild, he created his own MCP servers for his workload — including an mPulse MCP for real-user monitoring data and a Bot Traffic Tester — and a Slack /check-ip bot for 24/7 security investigations." },
+      { k: ['check-ip', 'check ip', 'slack bot', 'slack'], a: "Sachin built a Slack IP Check Bot for 24/7 automated security investigations — the /check-ip command lets L1 support resolve customer complaints about blocked requests quickly." },
       { k: ['claude'], a: "Sachin is proficient in Claude Code and uses it daily, together with his MCP servers — spinning up VMs, querying the warehouse, chasing latency spikes and opening tickets, all by asking. At The Home Depot it's part of his real, everyday workflow." },
-      { k: ['akamai', 'waf', 'cdn'], a: "Akamai is core to Sachin's current role: tuning WAF and CDN policies against the OWASP Top 10 so production traffic stays fast and secure, plus property, DNS and certificate work through his MCP tooling." },
+      { k: ['waf', 'firewall rules', 'custom rules', 'false positive'], a: "Sachin's WAF work at The Home Depot: custom rules built from match conditions that target attack signatures while letting business-critical traffic (payment processors, partner APIs) through, weekly rule reviews, precision exceptions for false positives, emergency time-bound exceptions during incidents, OWASP Top 10 triage from SIEM events, and rule lifecycle promotion from dev to staging to production." },
+      { k: ['akamai', 'cdn', 'property manager', 'ion premier'], a: "Akamai is the core of Sachin's Home Depot role. He runs 70+ CDN properties serving 60M+ requests a day: Property Manager rule trees, DSA-to-Ion Premier migrations, domain onboarding with edge hostnames and DNS cutover, GTM failover, cache optimization, SSL renewals through CPS, and performance work with DataStream, mPulse and Grafana/Hydrolix." },
+      { k: ['incident', 'on-call', 'on call', 'pagerduty', 'p1', 'outage', 'bridge'], a: "Sachin carries 24/7 on-call for Akamai CDN infrastructure at The Home Depot — PagerDuty alerts answered within SLA, P1 incident bridge calls coordinated across CDN, origin and application teams, live traffic analysis (Pragma headers, curl, DataStream logs) to pin an issue to CDN, WAF or origin, emergency WAF exceptions to restore service, and documented root-cause analysis after the fact." },
+      { k: ['performance', 'cache', 'mpulse', 'grafana', 'speed', 'slow'], a: "On performance, Sachin improves cache-hit ratios through cache-key analysis, query-string stripping and TTLs by content type, optimizes origins with persistent connections and SureRoute, builds Grafana/Hydrolix dashboards (RPS, error rates, cache hit ratio, geography), and uses mPulse RUM data to find page-load bottlenecks and check Core Web Vitals." },
       { k: ['gcp', 'google', 'gke', 'kubernetes', 'k8s'], a: "Sachin works in GCP day to day at The Home Depot — hardening GKE (Kubernetes) cluster configurations for production workloads and automating changes with Terraform." },
-      { k: ['skill', 'stack', 'tech', 'tools', 'know'], a: "Sachin's stack: GCP (GKE) · Kubernetes · Akamai WAF/CDN · Azure · AWS · Terraform · Docker · CI/CD. On the AI side: MCP servers, Claude Code, AI agents and prompt-driven automation." },
-      { k: ['experience', 'work history', 'worked', 'career', 'jobs', 'background'], a: "Sachin's experience:\n• The Home Depot — Data and Cloud Security Engineer (Oct 2025 – present, Atlanta/remote): GCP/GKE, Akamai WAF/CDN, Terraform, AI-driven ops.\n• Veracode — Cloud Infrastructure Engineer (Apr – Oct 2025): Azure VMs/networking via Terraform, AKS monitoring, Okta, ServiceNow.\n• Pennsylvania Turnpike Commission — Cloud Infrastructure Engineer / Analyst (Aug 2024 – Apr 2025): Azure networking, VMs for SAP HANA testing, Akamai proxy logs." },
-      { k: ['home depot', 'current', 'now', 'role', 'job'], a: "Sachin is a Data and Cloud Security Engineer at The Home Depot (contract, since Oct 2025, remote from Atlanta). His work: GCP (GKE) clusters, Akamai WAF/CDN policy tuning against the OWASP Top 10, Terraform automation — and AI-driven ops with MCP servers and Claude Code." },
+      { k: ['skill', 'stack', 'tech', 'tools', 'know'], a: "Sachin's toolkit, grouped: CDN Technologies (Property Manager, Ion Premier, Cloudlets, Site Shield, DataStream); Akamai Security (WAF, Bot Manager Premium, Rate Policies, IP Geo Firewall, TLS Fingerprinting); Security & Compliance (OWASP Top 10, PCI, incident response); Monitoring (Grafana, Hydrolix, mPulse, PagerDuty); Tools (Control Center, CPS, ServiceNow, Git, curl); Cloud (GCP/GKE, Kubernetes, AWS, Azure, Terraform) — plus Claude Code and MCP on the AI side." },
+      { k: ['experience', 'work history', 'worked', 'career', 'jobs', 'background'], a: "Sachin's experience:\n• The Home Depot — Data and Cloud Security Engineer (Oct 2025 – present, Atlanta/remote): Akamai CDN/WAF at scale, GCP/GKE, Terraform, 24/7 on-call, AI-driven ops.\n• Veracode — Cloud Infrastructure Engineer (Apr – Oct 2025): Azure VMs/networking via Terraform, AKS monitoring, Okta, ServiceNow.\n• Pennsylvania Turnpike Commission — Cloud Infrastructure Engineer / Analyst (Aug 2024 – Apr 2025): Azure networking, VMs for SAP HANA testing, Akamai proxy logs." },
+      { k: ['home depot', 'current', 'now', 'role', 'job'], a: "Sachin is a Data and Cloud Security Engineer at The Home Depot (since Oct 2025, remote from Atlanta). Day to day that's Akamai CDN/WAF operations at production scale — 70+ properties, 60M+ requests a day — plus GCP (GKE) hardening, Terraform automation, 24/7 PagerDuty on-call and P1 incident bridges, and AI-driven ops with MCP servers and Claude Code." },
       { k: ['azure'], a: "Sachin has close to two years in Azure environments — VMs and networking via Terraform, AKS deployments and monitoring, DNS/firewall rules and Azure AD permissions, from his time at Veracode and the Pennsylvania Turnpike Commission." },
       { k: ['aws', 'certif', 'cert'], a: "Sachin is AWS Certified — Solutions Architect, Associate (issued Jun 2024, valid to Jun 2027). He has cloud experience across AWS, Azure and GCP." },
-      { k: ['project', 'portfolio', 'ai work', 'automation', 'agent'], a: "Sachin's AI work: (1) ALECS, remodeled end to end — 190+ Akamai tools an AI can call; (2) MCP servers he created himself, like the mPulse MCP and Bot Traffic Tester; (3) a daily workflow chaining Grafana, BigQuery, Playwright, Context7 and Atlassian MCPs through Claude Code — one sentence across multiple systems." },
+      { k: ['project', 'portfolio', 'ai work', 'automation', 'agent'], a: "Sachin's AI work: (1) an MCP automation platform integrating Akamai, Grafana/Hydrolix, ServiceNow and mPulse; (2) ALECS, an open-source Akamai MCP server he took as a base and remodeled completely end to end, plus MCP servers he built himself (mPulse MCP, Bot Traffic Tester); (3) a Slack /check-ip bot; (4) a daily workflow chaining Grafana, BigQuery, Playwright, Context7 and Atlassian MCPs through Claude Code." },
       { k: ['award', 'recognition', 'caught orange'], a: "Sachin is a two-time winner of The Home Depot's 'Caught Orange Handed' recognition award." },
       { k: ['contact', 'reach', 'email', 'hire', 'hiring', 'linkedin', 'github', 'connect'], a: "Best way to reach Sachin is LinkedIn: linkedin.com/in/sachinvm1991 — his code and open-source setups are on GitHub: github.com/Sachin-81. He's always happy to talk cloud security, Kubernetes, Claude Code, or getting AI agents to do real work." },
-      { k: ['who is', 'sachin'], a: "Sachin Goudiperu is a Data and Cloud Security Engineer at The Home Depot, based in Atlanta. He works across AWS, Azure and GCP (currently GCP day to day), and builds AI agents that run cloud ops — MCP servers he created, an Akamai MCP server he remodeled end to end from an open-source base, and Claude Code in his daily workflow." },
+      { k: ['who is', 'sachin'], a: "Sachin Goudiperu is a Data and Cloud Security Engineer at The Home Depot, based in Atlanta. He works across AWS, Azure and GCP (currently GCP day to day), runs Akamai CDN/WAF at scale, and builds AI agents that run cloud ops — MCP servers he created, an Akamai MCP server he remodeled end to end from an open-source base, and Claude Code in his daily workflow." },
       { k: ['terraform'], a: "Terraform is Sachin's automation backbone — repeatable, safe infrastructure changes across GCP and Azure: VMs, networking, resource groups and cluster configuration." },
-      { k: ['hi', 'hello', 'hey'], a: "Hi! I'm Sachin's AI assistant. Ask me about his skills, the MCP servers he built, the ALECS rebuild, his experience, or how to contact him." }
+      { k: ['hi', 'hello', 'hey'], a: "Hi! I'm Sachin's AI assistant. Ask me about his Akamai scale, bot management, WAF work, on-call experience, the MCP platform he built, his skills, or how to contact him." }
     ];
-    var FALLBACK = "I can answer questions about Sachin's skills, his AI projects (ALECS and the MCP servers he built), his experience, certifications, and how to contact him. Try one of the suggestions below, or ask in your own words.";
-    var CHIPS = ['What does Sachin do?', 'Tell me about ALECS', 'Which MCP servers did he build?', 'What is his experience?', 'How do I contact him?'];
-
+    var FALLBACK = "I can answer questions about Sachin's skills, his Akamai work (scale, WAF, bots), on-call experience, his AI projects (the MCP platform, ALECS rebuild, Slack bot), his experience, certifications, and how to contact him. Try one of the suggestions below, or ask in your own words.";
+    var CHIPS = ['What does Sachin do?', 'Tell me about ALECS', 'How does he handle bots?', "What's his Akamai scale?", 'What is his experience?', 'How do I contact him?'];
     function addMsg(text, who) {
       var d = document.createElement('div');
       d.className = 'msg ' + who;
@@ -378,37 +742,26 @@
       });
       return bestScore >= 2 && best ? best.a : FALLBACK;
     }
-    function ask(q) {
-      addMsg(q, 'user');
-      var a = answer(q);
-      setTimeout(function () { addMsg(a, 'bot'); }, 350);
-    }
+    function ask(q) { addMsg(q, 'user'); var a = answer(q); setTimeout(function () { addMsg(a, 'bot'); }, 350); }
     function openChat() {
       panel.classList.add('open');
       fab.style.display = 'none';
       if (!greeted) {
         greeted = true;
-        addMsg("Hi, I'm Sachin's AI assistant. Ask me anything about his work — skills, projects, experience — or tap a question below.", 'bot');
+        addMsg("Hi, I'm Sachin's AI assistant. Ask me anything about his work — Akamai scale, bots, WAF, on-call, his MCP platform, skills, experience — or tap a question below.", 'bot');
       }
       setTimeout(function () { input.focus(); }, 60);
     }
-    function closeChat() {
-      panel.classList.remove('open');
-      fab.style.display = '';
-    }
+    function closeChat() { panel.classList.remove('open'); fab.style.display = ''; }
     CHIPS.forEach(function (c) {
       var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'chip';
-      b.textContent = c;
+      b.type = 'button'; b.className = 'chip'; b.textContent = c;
       b.addEventListener('click', function () { ask(c); });
       chipsBox.appendChild(b);
     });
     fab.addEventListener('click', openChat);
     closeBtn.addEventListener('click', closeChat);
-    document.querySelectorAll('[data-open-chat]').forEach(function (el) {
-      el.addEventListener('click', openChat);
-    });
+    document.querySelectorAll('[data-open-chat]').forEach(function (el) { el.addEventListener('click', openChat); });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var v = input.value.trim();
@@ -416,178 +769,6 @@
       input.value = '';
       ask(v);
     });
-  })();
-</script>
-
-<script>
-  // The avatar introduces himself: after the entrance he starts talking
-  // (avatar-talk-short.mp4 — lip-synced, with voice). Browsers may block
-  // autoplay-with-sound for first-time visitors; then the talk starts on
-  // the visitor's first tap or click anywhere. Clicking the avatar
-  // replays the intro. When it ends, the standing avatar returns.
-  (function () {
-    var vid = document.getElementById('heroVideo');
-    var img = document.getElementById('heroPhoto');
-    if (!vid || !img) return;
-    var talking = false;
-    var armed = false;
-    function showAvatar() {
-      talking = false;
-      vid.pause();
-      vid.style.display = 'none';
-      img.style.display = 'block';
-    }
-    function armFirstInteraction() {
-      if (armed) return;
-      armed = true;
-      var go = function () {
-        document.removeEventListener('pointerdown', go);
-        document.removeEventListener('keydown', go);
-        talk();
-      };
-      document.addEventListener('pointerdown', go);
-      document.addEventListener('keydown', go);
-    }
-    function talk() {
-      if (talking) return;
-      talking = true;
-      img.style.display = 'none';
-      vid.style.display = 'block';
-      vid.currentTime = 0;
-      var p = vid.play();
-      if (p && p.catch) {
-        p.catch(function () {
-          showAvatar();
-          armFirstInteraction();
-        });
-      }
-    }
-    var cap = document.getElementById('introCaption');
-    var capLines = [
-      { until: 6.9, text: "Hey hi guys, my name is Sachin, and I'm working as a Data and Cloud Security Engineer at The Home Depot." },
-      { until: 99, text: "Welcome to my portfolio." }
-    ];
-    vid.addEventListener('timeupdate', function () {
-      if (!cap) return;
-      if (vid.paused || vid.ended) { cap.classList.remove('show'); return; }
-      for (var i = 0; i < capLines.length; i++) {
-        if (vid.currentTime < capLines[i].until) { cap.textContent = capLines[i].text; break; }
-      }
-      cap.classList.add('show');
-    });
-    vid.addEventListener('pause', function () { if (cap) cap.classList.remove('show'); });
-    vid.addEventListener('ended', function () { if (cap) cap.classList.remove('show'); showAvatar(); });
-    vid.addEventListener('click', function () { if (talking) showAvatar(); });
-    img.addEventListener('click', function () { talk(); });
-    var walkDone = false;
-    document.addEventListener('walkdone', function () {
-      walkDone = true;
-      setTimeout(talk, 700);
-    });
-    window.addEventListener('load', function () { setTimeout(function () { if (!walkDone) talk(); }, 11500); });
-  })();
-</script>
-
-<script>
-  // Reel-style interactions: the avatar says hi, waves, follows your
-  // cursor, and the skill tags can be grabbed and thrown.
-  (function () {
-    var box = document.querySelector('.avatar-box');
-    var img = document.getElementById('heroPhoto');
-    var bubble = document.getElementById('hiBubble');
-    if (!box || !img) return;
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var lines = [
-      "Hi! I'm Sachin — welcome to my portfolio.",
-      "Move your cursor — I'll follow.",
-      "Hit \u201CInterview my portfolio\u201D and ask me anything.",
-      "I build AI agents that run cloud ops."
-    ];
-    var li = 0;
-    function sayHi() {
-      if (!bubble) return;
-      bubble.textContent = lines[li % lines.length];
-      li++;
-      bubble.classList.add('show');
-      if (!reduced) { img.classList.remove('waving'); void img.offsetWidth; img.classList.add('waving'); }
-      clearTimeout(sayHi._t);
-      sayHi._t = setTimeout(function () { bubble.classList.remove('show'); }, 4200);
-    }
-    document.addEventListener('walkdone', function () { setTimeout(sayHi, 300); });
-    img.addEventListener('mouseenter', sayHi);
-    img.addEventListener('click', sayHi);
-    if (!reduced && window.matchMedia('(pointer: fine)').matches) {
-      var tx = 0, ty = 0, cx = 0, cy = 0;
-      document.addEventListener('mousemove', function (e) {
-        tx = (e.clientX / window.innerWidth - 0.5) * 22;
-        ty = (e.clientY / window.innerHeight - 0.5) * 12;
-      });
-      (function loop() {
-        cx += (tx - cx) * 0.06;
-        cy += (ty - cy) * 0.06;
-        img.style.translate = cx.toFixed(1) + 'px ' + cy.toFixed(1) + 'px';
-        img.style.rotate = (cx * 0.05).toFixed(2) + 'deg';
-        requestAnimationFrame(loop);
-      })();
-    }
-    document.querySelectorAll('.chip').forEach(function (chip, i) {
-      chip.style.animationDelay = (i * 0.22) + 's';
-      var ox = 0, oy = 0, vx = 0, vy = 0, lx = 0, ly = 0, drag = false, raf = null;
-      function apply() { chip.style.transform = 'translate(' + ox + 'px,' + oy + 'px)'; }
-      function inertia() {
-        ox += vx; oy += vy; vx *= 0.94; vy *= 0.94;
-        apply();
-        if (Math.abs(vx) > 0.2 || Math.abs(vy) > 0.2) raf = requestAnimationFrame(inertia);
-      }
-      chip.addEventListener('pointerdown', function (e) {
-        drag = true; lx = e.clientX; ly = e.clientY; vx = 0; vy = 0;
-        if (raf) cancelAnimationFrame(raf);
-        chip.classList.add('drag');
-        chip.setPointerCapture(e.pointerId);
-        e.preventDefault();
-      });
-      chip.addEventListener('pointermove', function (e) {
-        if (!drag) return;
-        ox += e.clientX - lx; oy += e.clientY - ly;
-        vx = e.clientX - lx; vy = e.clientY - ly;
-        lx = e.clientX; ly = e.clientY;
-        apply();
-      });
-      function end() {
-        if (!drag) return;
-        drag = false;
-        chip.classList.remove('drag');
-        raf = requestAnimationFrame(inertia);
-      }
-      chip.addEventListener('pointerup', end);
-      chip.addEventListener('pointercancel', end);
-    });
-  })();
-</script>
-
-<script>
-  // Main-character entrance: he walks in (video), then the standing
-  // avatar takes over and the intro talk begins.
-  (function () {
-    var walk = document.getElementById('walkVideo');
-    var img = document.getElementById('heroPhoto');
-    if (!walk || !img) { document.dispatchEvent(new Event('walkdone')); return; }
-    var done = false;
-    img.style.opacity = '0';
-    function arrive() {
-      if (done) return;
-      done = true;
-      img.style.display = 'block';
-      requestAnimationFrame(function () { img.style.opacity = '1'; });
-      walk.style.opacity = '0';
-      setTimeout(function () { walk.style.display = 'none'; }, 480);
-      document.dispatchEvent(new Event('walkdone'));
-    }
-    walk.addEventListener('ended', arrive);
-    walk.addEventListener('error', arrive);
-    var p = walk.play();
-    if (p && p.catch) p.catch(function () { /* muted autoplay should work; fallback timer below */ });
-    setTimeout(arrive, 11500);
   })();
 </script>
 </body>
